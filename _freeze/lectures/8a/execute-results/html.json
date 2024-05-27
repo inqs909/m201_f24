@@ -1,0 +1,20 @@
+{
+  "hash": "7303d74da2f15ae361647392d1370503",
+  "result": {
+    "markdown": "---\ntitle: \"Quantifying Errors\"\nformat:\n  revealjs:\n    scrollable: true\n    theme: [default, styles.scss]\n    navigation-mode: vertical\n    controls-layout: bottom-right\n    controls-tutorial: true\n    incremental: false \n    chalkboard:\n      src: notes/chalkboard_1a.json\n      storage: chalkboard_pres\n      theme: whiteboard\n      chalk-width: 4\nknitr:\n  opts_chunk: \n    echo: false\n    eval: true\n    message: false\n    warnings: false\n    comment: \"#>\" \n    \nrevealjs-plugins:\n  - pointer\n  - verticator\n  \nfilters: \n  - reveal-header\n  - code-fullscreen\n  - reveal-auto-agenda\n  \nauto-agenda:\n  bullets: numbered\n  heading: Learning Outcomes\n  \neditor: visual\n---\n\n\n\n\n# Announcements\n\n## Plotathon\n\n![](img/PAT24%20L&L%20Tools%20Workshop.png){fig-align=\"center\"}\n\n## Math Senior Seminar\n\n![](img/Bayesian%20Mixed%20Effects%20Models%20and%20Cats%20Analysis%20of%20Evolutionary%20Biological%20Data%20(1)%20(1).png){fig-align=\"center\"}\n\n# Quantifying Error in Models\n\n## Word Model\n\n$$\nY = Model + Error\n$$\n\n## Model Mean\n\n$$\nY = Mean + Error\n$$\n\n## Model Median\n\n$$\nY = Median + Error\n$$\n\n## Model Mode\n\n$$\nY = Mode + Error\n$$\n\n## Quantifying Error\n\n$$\nError = Y - Model\n$$\n\n## Quantifying Total Error\n\n1, 2, 2, 3, 3, 3\n\n::: fragment\nMean: 2.33\n\nMedian: 2.5\n\nMode: 3\n:::\n\n## Errors\n\nMean: -1.33, -.33, -.33, .67, .67, .67\n\nMedian: -1.5, -.5, -.5., .5, .5. .5\n\nMode: -2, -1, -1, 0, 0, 0\n\n## Add all errors together\n\n$$\n\\sum^6_{i-1}Y_i -\\mathrm{model}\n$$\n\n::: fragment\nMean: $0.02 \\approx 0$\n\nMedian: -1\n\nMode: -4\n:::\n\n## Absolute Value of error\n\n$$\n\\sum^6_{i-1}|Y_i -\\mathrm{model}|\n$$\n\n::: fragment\nMean: 4\n\nMedian: 4\n\nMode: 4\n:::\n\n## Sum of Squares\n\n$$\n\\sum^6_{i-1}(Y_i -\\mathrm{model})^2\n$$\n\n::: fragment\nMean: 3.3334\n\nMedian: 3.5\n\nMode: 6\n:::\n\n## Why Mean\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](8a_files/figure-revealjs/unnamed-chunk-2-1.png){width=960}\n:::\n:::\n\n\n## Why Mean\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](8a_files/figure-revealjs/unnamed-chunk-3-1.png){width=960}\n:::\n:::\n\n\n## Why Mean\n\n\n::: {.cell}\n\n```{.r .cell-code}\npna |> with(mean(flipper_length_mm))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n#> [1] 200.967\n```\n:::\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](8a_files/figure-revealjs/unnamed-chunk-5-1.png){width=960}\n:::\n:::\n\n\n## Why Not Others?\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](8a_files/figure-revealjs/unnamed-chunk-6-1.png){width=960}\n:::\n:::\n",
+    "supporting": [
+      "8a_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
