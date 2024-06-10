@@ -15,7 +15,7 @@
 <link href="../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.506">
+  <meta name="generator" content="quarto-1.4.554">
 
   <title>MATH 201 - Research Design</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -344,7 +344,7 @@
 
 </section>
 <section>
-<section id="announcements" class="title-slide slide level1 agenda-slide center">
+<section id="announcements" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Announcements</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -395,7 +395,7 @@
 <img data-src="img/frame_3.png" class="quarto-figure quarto-figure-center r-stretch"><p><a href="https://forms.gle/tYgmpJFk6fzz36r18" class="uri">https://forms.gle/tYgmpJFk6fzz36r18</a></p>
 </section></section>
 <section>
-<section id="research-design" class="title-slide slide level1 agenda-slide center">
+<section id="research-design" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Research Design</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -448,7 +448,7 @@
 </ul>
 </section></section>
 <section>
-<section id="randomization" class="title-slide slide level1 agenda-slide center">
+<section id="randomization" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Randomization</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -564,7 +564,7 @@
 
 <img data-src="5b_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section id="epe-session" class="title-slide slide level1 agenda-slide center">
+<section id="epe-session" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>EPE-Session</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -589,8 +589,10 @@
 <section id="time-management" class="slide level2">
 <h2>Time Management</h2>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 <div class="reveal-header">
 <div class="header-logo">
@@ -937,6 +939,24 @@
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("www\.inqs\.info\/m201_f24");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -973,7 +993,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

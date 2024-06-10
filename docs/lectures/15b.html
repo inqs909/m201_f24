@@ -12,7 +12,7 @@
 <link href="../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.506">
+  <meta name="generator" content="quarto-1.4.554">
 
   <title>MATH 201 - Confidence Intervals</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -406,7 +406,7 @@
 
 </section>
 <section>
-<section id="confidence-intervals" class="title-slide slide level1 agenda-slide center">
+<section id="confidence-intervals" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Confidence Intervals</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -441,8 +441,8 @@
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>res <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span> <span class="fu">lm</span>(body_mass_kg <span class="sc">~</span> species, <span class="at">data =</span> .)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>res <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span> <span class="fu">lm</span>(body_mass_kg <span class="sc">~</span> species, <span class="at">data =</span> .)</span>
+<span id="cb1-2"><a></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
@@ -491,23 +491,23 @@
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>extract_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
-<span id="cb3-2"><a href="#cb3-2"></a>means <span class="ot">&lt;-</span> <span class="fu">favstats</span>(body_mass_kg <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">%&gt;%</span> </span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">select</span>(species, mean) <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">t</span>() <span class="sc">%&gt;%</span> .[<span class="dv">2</span>,] <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>() </span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="fu">return</span>(<span class="fu">tibble</span>(<span class="at">adelie =</span> means[<span class="dv">1</span>], </span>
-<span id="cb3-6"><a href="#cb3-6"></a>                <span class="at">chinstrap =</span> means[<span class="dv">2</span>], </span>
-<span id="cb3-7"><a href="#cb3-7"></a>                <span class="at">gentoo =</span> means[<span class="dv">3</span>]))</span>
-<span id="cb3-8"><a href="#cb3-8"></a>}</span>
-<span id="cb3-9"><a href="#cb3-9"></a>boot_means <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">extract_mean</span>(<span class="fu">resample</span>(penguins))</span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="fu">print</span>(<span class="st">"Adelie"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>extract_mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb3-2"><a></a>means <span class="ot">&lt;-</span> <span class="fu">favstats</span>(body_mass_kg <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a></a>  <span class="fu">select</span>(species, mean) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">t</span>() <span class="sc">%&gt;%</span> .[<span class="dv">2</span>,] <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>() </span>
+<span id="cb3-5"><a></a><span class="fu">return</span>(<span class="fu">tibble</span>(<span class="at">adelie =</span> means[<span class="dv">1</span>], </span>
+<span id="cb3-6"><a></a>                <span class="at">chinstrap =</span> means[<span class="dv">2</span>], </span>
+<span id="cb3-7"><a></a>                <span class="at">gentoo =</span> means[<span class="dv">3</span>]))</span>
+<span id="cb3-8"><a></a>}</span>
+<span id="cb3-9"><a></a>boot_means <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">extract_mean</span>(<span class="fu">resample</span>(penguins))</span>
+<span id="cb3-10"><a></a><span class="fu">print</span>(<span class="st">"Adelie"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] "Adelie"</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">quantile</span>(boot_means<span class="sc">$</span>adelie, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">quantile</span>(boot_means<span class="sc">$</span>adelie, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;     2.5%    97.5% 
@@ -515,14 +515,14 @@
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">print</span>(<span class="st">"Chinstrap"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">print</span>(<span class="st">"Chinstrap"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] "Chinstrap"</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">quantile</span>(boot_means<span class="sc">$</span>chinstrap, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">quantile</span>(boot_means<span class="sc">$</span>chinstrap, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;     2.5%    97.5% 
@@ -530,14 +530,14 @@
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">print</span>(<span class="st">"Gentoo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">print</span>(<span class="st">"Gentoo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] "Gentoo"</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">quantile</span>(boot_means<span class="sc">$</span>gentoo, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">quantile</span>(boot_means<span class="sc">$</span>gentoo, <span class="at">probs =</span> <span class="fu">c</span>(.<span class="dv">025</span>, .<span class="dv">975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;     2.5%    97.5% 
@@ -552,7 +552,7 @@
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>res <span class="sc">%&gt;%</span> <span class="fu">pairwise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>res <span class="sc">%&gt;%</span> <span class="fu">pairwise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
@@ -570,7 +570,7 @@
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>res <span class="sc">%&gt;%</span> <span class="fu">pairwise</span>(<span class="at">plot =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>res <span class="sc">%&gt;%</span> <span class="fu">pairwise</span>(<span class="at">plot =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 <div class="cell-output cell-output-stdout">
@@ -585,7 +585,7 @@
 </div>
 <img data-src="15b_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section id="semester" class="title-slide slide level1 agenda-slide center">
+<section id="semester" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Semester</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -652,7 +652,7 @@
 <p>DEC 7th 11:59 PM</p>
 </section></section>
 <section>
-<section id="course-evaluations" class="title-slide slide level1 agenda-slide center">
+<section id="course-evaluations" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Course Evaluations</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -681,7 +681,7 @@
 </ul>
 </section></section>
 <section>
-<section id="complete-survey" class="title-slide slide level1 agenda-slide center">
+<section id="complete-survey" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Complete Survey</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -711,8 +711,10 @@
 </figure>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 <div class="reveal-header">
 <div class="header-logo">
@@ -1059,6 +1061,24 @@
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("www\.inqs\.info\/m201_f24");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1095,7 +1115,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

@@ -1,6 +1,6 @@
 ---
 title: "Syllabus"
-editor: source
+editor: visual
 format:
   html: 
     code-fold: true
@@ -11,7 +11,7 @@ format:
 
 ### Course Information
 
-**Term:** Fall 2023
+**Term:** Fall 2024
 
 **Instructor:** Isaac Quintanilla Salinas
 
@@ -20,12 +20,6 @@ format:
 **Office Location:** BTE 2840
 
 **Office Hours:**
-
-| OH       | Course       | R Programming | TEA Math/Stat Hour |
-|:---------|:-------------|:--------------|:-------------------|
-| Day      | MW           | Tue           | Th                 |
-| Location | BT 1462      | LRC           | BTE Courtyard      |
-| Time     | 4:30-6:00 PM | 10-12 AM      | 12-1:30 PM         |
 
 Or by Zoom appointment.
 
@@ -45,7 +39,7 @@ Critical reasoning using a quantitative and statistical, problem-solving approac
 
 ### Textbook
 
-This course will use Coursekata, a Canvas-embedded textbook with built-in R functionality.
+[Introduction to Modern Statistics](https://openintro-ims.netlify.app/)
 
 ### Recommended Software
 
@@ -117,24 +111,24 @@ There will be **3** extra credit opportunities worth a total of 10% of your over
 
 The following outline may be subject to change. Any changes will be announced in class.
 
-| Week        | Topic                                           | Ch. Due | Lab Due     | Quiz    |
-|:------------|:-------------------|:------------|:------------|-------------|
-| 8/21-8/25   | Welcome to College/Course                       |         |             |         |
-| 8/28-9/1    | Welcome to Statistics: A Modeling Approach      | Ch 1    | 1A and 1B   | Quiz 1  |
-| 9/4-9/8     | Labor Day/Understanding Data                    | Ch 2    | 2A          | Quiz 2  |
-| 9/11-9/15   | Examining Distributions                         | Ch 3    | 3A and 3B   | Quiz 3  |
-| 9/18-9/22   | Explaining Variation                            | Ch 4    | 4A and 4B   | Quiz 4  |
-| 9/25-9/29   | Exam #1/ A Simple Model                         |         |             |         |
-| 10/2-10/6   | A Simple Model                                  | Ch 5    | 5A and 5B   | Quiz 5  |
-| 10/9-10/13  | Quantifying Error                               | Ch 6    | 6A and 6B   | Quiz 6  |
-| 10/16-10/20 | Adding an Explanatory Variable to the Model     | Ch 7    | 7A and 7B   | Quiz 7  |
-| 10/23-10/27 | Digging Deeper into Group Model                 | Ch 8    | 8A          | Quiz 8  |
-| 10/30-11/3  | Models with a Quantitative Explanatory Variable | Ch 9    | 9A and 9B   | Quiz 9  |
-| 11/6-11/10  | Exam #2                                         |         |             |         |
-| 11/13-11/17 | Logic of Inference                              | Ch 10   | 10A and 10B | Quiz 10 |
-| 11/20-11/24 | Model Comparison with F                         | Ch 11   | 11A         | Quiz 11 |
-| 11/27-12/1  | Parameter Estimation and Confidence Intervals   | Ch 12   | 12A and 12B | Quiz 12 |
-| 12/4-12/8   | Exam #3                                         | Ch 13   |             |         |
+| Week        | Topic                                     | Readings   | Lab Due | HW Due | Quiz Due |
+|:-------------|:-------------|:-------------|:----------|-----------|--------------|
+| 8/26-8/30   | Welcome to College/Course                 |            |         |        |          |
+| 9/2-9/6     | Hello Data and Study Design               | Ch 1 and 2 | 1       | 1      | 1        |
+| 9/9-9/13    | Exploring Categorical Data                | Ch 4       | 2       | 2      | 2        |
+| 9/16-9/20   | Exploring Numerical Data                  | Ch 5       | 3       | 3      | 3        |
+| 9/23-9/27   | Simple Linear Regression                  | Ch 7       | 4       | 4      | 4        |
+| 9/30-10/4   | Exam #1/Multivariable Linear Regression   | Ch 8       |         |        |          |
+| 10/7-10/11  | Logistic Regression                       | Ch 9       | 5       | 5      | 5        |
+| 10/14-10/18 | Hypothesis Testing                        | Ch 11      | 6       | 6      | 6        |
+| 10/21-10/25 | Bootstrap-based Confidence Intervals      | Ch 12      | 7       | 7      | 7        |
+| 10/28-11/1  | Mathematical Models                       | Ch 13      | 8       | 8      | 8        |
+| 11/4-11/9   | Decision Errors                           | Ch 14      | 9       | 9      | 9        |
+| 11/11-11/15 | Exam #2                                   |            |         |        |          |
+| 11/18-11/22 | Linear Regression Inference               | Ch 24      | 10      | 10     | 10       |
+| 11/25-11/29 | Multivariable Linear Regression Inference | Ch 25      |         |        |          |
+| 12/2-12/6   | Logistic Regression Inference             | Ch 26      | 11      | 11     | 11       |
+| 12/4-12/8   | Exam #3                                   |            |         |        |          |
 
 ### University Policies
 
@@ -149,9 +143,7 @@ The following outline may be subject to change. Any changes will be announced in
 3.  **Emergency Procedure Notice to Students:**
 
     CSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University's Spring 2023 Semester [website](https://www.csuci.edu/news/campus-updates/covid-19/index.htm) or they may be subject to removal from the classroom.
-    
-    
+
 ### Important note about a possible work stoppage during the semester
 
 The California Faculty Association (the labor union of Lecturers, Professors, Coaches, Counselors, and Librarians across the 23 CSU campuses) is in a difficult contract dispute with California State University management. It is possible that we will call a strike or other work stoppage this term. I promise to promptly inform you of any schedule disruption. Our working conditions are your learning conditions; we seek to protect both. For further information go to www.CFAbargaining.org.
-

@@ -15,7 +15,7 @@
 <link href="../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.506">
+  <meta name="generator" content="quarto-1.4.554">
 
   <title>MATH 201 - A Simple Model</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -409,7 +409,7 @@
 
 </section>
 <section>
-<section id="announcements" class="title-slide slide level1 agenda-slide center">
+<section id="announcements" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Announcements</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -448,7 +448,7 @@
 </ul>
 </section></section>
 <section>
-<section id="a-simple-model" class="title-slide slide level1 agenda-slide center">
+<section id="a-simple-model" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>A Simple Model</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -543,7 +543,7 @@ Y = \beta_0 + \varepsilon
 </div>
 </section></section>
 <section>
-<section id="mean-vs-median" class="title-slide slide level1 agenda-slide center">
+<section id="mean-vs-median" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Mean vs Median</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -666,9 +666,9 @@ Y = \beta_0 + \varepsilon
 <section id="sum-of-deviations-with-mean" class="slide level2">
 <h2>Sum of Deviations with Mean</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2"></a>  {\(.) .<span class="sc">$</span>body_mass_g <span class="sc">-</span> <span class="fu">mean</span>(.<span class="sc">$</span>body_mass_g)}() <span class="sc">|&gt;</span> </span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a></a>  {\(.) .<span class="sc">$</span>body_mass_g <span class="sc">-</span> <span class="fu">mean</span>(.<span class="sc">$</span>body_mass_g)}() <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a></a>  <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] -2.637535e-11</code></pre>
 </div>
@@ -681,16 +681,16 @@ Y = \beta_0 + \varepsilon
 <section id="sum-of-median-deviations-with-median" class="slide level2">
 <h2>Sum of Median Deviations with Median</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a href="#cb4-2"></a>  {\(.) .<span class="sc">$</span>body_mass_g <span class="sc">-</span> <span class="fu">median</span>(.<span class="sc">$</span>body_mass_g)}() <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>penguins <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a></a>  {\(.) .<span class="sc">$</span>body_mass_g <span class="sc">-</span> <span class="fu">median</span>(.<span class="sc">$</span>body_mass_g)}() <span class="sc">|&gt;</span> </span>
+<span id="cb4-3"><a></a>  <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 52300</code></pre>
 </div>
 </div>
 </section></section>
 <section>
-<section id="epe-session" class="title-slide slide level1 agenda-slide center">
+<section id="epe-session" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>EPE Session</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -722,8 +722,10 @@ Y = \beta_0 + \varepsilon
 <p>Come up with 3 ways to transform the data.</p>
 <p>Does this remind you of something you have learned in your previous math classes?</p>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 <div class="reveal-header">
 <div class="header-logo">
@@ -1070,6 +1072,24 @@ Y = \beta_0 + \varepsilon
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("www\.inqs\.info\/m201_f24");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1106,7 +1126,11 @@ Y = \beta_0 + \varepsilon
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

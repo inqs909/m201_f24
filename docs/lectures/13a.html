@@ -15,7 +15,7 @@
 <link href="../site_libs/quarto-contrib/code-fullscreen-1.0.0/code-fullscreen.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.506">
+  <meta name="generator" content="quarto-1.4.554">
 
   <title>MATH 201 - Inference</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -409,7 +409,7 @@
 
 </section>
 <section>
-<section id="inference" class="title-slide slide level1 agenda-slide center">
+<section id="inference" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Inference</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -429,8 +429,8 @@
 <section id="linear-model" class="slide level2">
 <h2>Linear Model</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>res <span class="ot">&lt;-</span> <span class="fu">lm</span>(flavor <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>res <span class="ot">&lt;-</span> <span class="fu">lm</span>(flavor <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span>
+<span id="cb1-2"><a></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt; Call:
@@ -459,61 +459,61 @@
 <section id="randomness-of-data-1" class="slide level2">
 <h2>Randomness of Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="13a_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="randomness-of-data-2" class="slide level2">
 <h2>Randomness of Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="13a_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
 <section id="shuffled-vs-emperical" class="slide level2">
 <h2>Shuffled vs Emperical</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">gf_point</span>(flavor <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">gf_point</span>(flavor <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="13a_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="fitting-a-line" class="slide level2">
 <h2>Fitting a Line</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>  <span class="fu">gf_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">gf_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="13a_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
 <section id="original-to-new" class="slide level2">
 <h2>Original to new</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>  <span class="fu">gf_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">gf_coefline</span>(<span class="at">model =</span> res, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">gf_point</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma) <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Aroma"</span>, <span class="at">y =</span> <span class="st">"Shuffled Flavor"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-4"><a></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a></a>  <span class="fu">gf_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-6"><a></a>  <span class="fu">gf_coefline</span>(<span class="at">model =</span> res, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="13a_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
 <section id="shuffle-lm-object" class="slide level2">
 <h2>Shuffle LM Object</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt; Call:
@@ -523,7 +523,7 @@
 #&gt; (Intercept)        aroma  
 #&gt;     7.25811      0.03535</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt; Call:
@@ -533,7 +533,7 @@
 #&gt; (Intercept)        aroma  
 #&gt;   7.5273979   -0.0002006</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt; Call:
@@ -543,7 +543,7 @@
 #&gt; (Intercept)        aroma  
 #&gt;     7.01632      0.06728</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt; Call:
@@ -553,7 +553,7 @@
 #&gt; (Intercept)        aroma  
 #&gt;     7.82616     -0.03965</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt; Call:
@@ -563,7 +563,7 @@
 #&gt; (Intercept)        aroma  
 #&gt;     7.39079      0.01784</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt; Call:
@@ -573,7 +573,7 @@
 #&gt; (Intercept)        aroma  
 #&gt;    7.594025    -0.008997</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">lm</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
 #&gt; Call:
@@ -588,27 +588,27 @@
 <section id="only-want-at-b1" class="slide level2">
 <h2>Only want at b1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] -0.02786611</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 0.002543512</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] -0.003899677</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 0.01983566</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] -0.0178645</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, <span class="at">data =</span> coffee_aroma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; [1] 0.03104147</code></pre>
 </div>
@@ -617,9 +617,9 @@
 <section id="repeat-it-10000" class="slide level2">
 <h2>Repeat it 10,000</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>b1_sim <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">10000</span>) <span class="sc">*</span> <span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, </span>
-<span id="cb34-2"><a href="#cb34-2"></a>                         <span class="at">data =</span> coffee_aroma)</span>
-<span id="cb34-3"><a href="#cb34-3"></a>b1_sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>b1_sim <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">10000</span>) <span class="sc">*</span> <span class="fu">b1</span>(<span class="fu">shuffle</span>(flavor) <span class="sc">~</span> aroma, </span>
+<span id="cb34-2"><a></a>                         <span class="at">data =</span> coffee_aroma)</span>
+<span id="cb34-3"><a></a>b1_sim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt;                  b1
 #&gt; 1     -4.314126e-02
@@ -10632,17 +10632,17 @@
 <section id="distribution-of-b_1-1" class="slide level2">
 <h2>Distribution of <span class="math inline">\(b_1\)</span></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">gf_dens</span>(b1_sim, <span class="sc">~</span> b1) <span class="sc">%&gt;%</span></span>
-<span id="cb36-2"><a href="#cb36-2"></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">36</span>),</span>
-<span id="cb36-3"><a href="#cb36-3"></a>           <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">28</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">gf_dens</span>(b1_sim, <span class="sc">~</span> b1) <span class="sc">%&gt;%</span></span>
+<span id="cb36-2"><a></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">36</span>),</span>
+<span id="cb36-3"><a></a>           <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">28</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="13a_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
 <section id="what-about-our-observed-value" class="slide level2">
 <h2>What about our observed value?</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">gf_dens</span>(b1_sim, <span class="sc">~</span> b1) <span class="sc">%&gt;%</span></span>
-<span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">gf_vline</span>(<span class="at">xintercept =</span> <span class="fu">b1</span>(res))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">gf_dens</span>(b1_sim, <span class="sc">~</span> b1) <span class="sc">%&gt;%</span></span>
+<span id="cb37-2"><a></a>  <span class="fu">gf_vline</span>(<span class="at">xintercept =</span> <span class="fu">b1</span>(res))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -10652,8 +10652,10 @@
 </div>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 <div class="reveal-header">
 <div class="header-logo">
@@ -11000,6 +11002,24 @@
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("www\.inqs\.info\/m201_f24");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -11036,7 +11056,11 @@
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

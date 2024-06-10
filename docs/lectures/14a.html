@@ -12,7 +12,7 @@
 <link href="../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.506">
+  <meta name="generator" content="quarto-1.4.554">
 
   <title>MATH 201 - Inference</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -706,7 +706,7 @@
 
 </section>
 <section>
-<section id="inference" class="title-slide slide level1 agenda-slide center">
+<section id="inference" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Inference</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -752,8 +752,8 @@ penguins <- penguins |> drop_na() |>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>res <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span> <span class="fu">lm</span>(body_mass_kg <span class="sc">~</span> species, <span class="at">data =</span> .)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>res <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span> <span class="fu">lm</span>(body_mass_kg <span class="sc">~</span> species, <span class="at">data =</span> .)</span>
+<span id="cb1-2"><a></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; 
@@ -778,10 +778,10 @@ penguins <- penguins |> drop_na() |>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>penguins <span class="sc">%&gt;%</span> <span class="fu">gf_jitter</span>(<span class="fu">shuffle</span>(body_mass_kg) <span class="sc">~</span> species) <span class="sc">%&gt;%</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Quarter Mile Time"</span>, <span class="at">y =</span> <span class="st">"MPG"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>penguins <span class="sc">%&gt;%</span> <span class="fu">gf_jitter</span>(<span class="fu">shuffle</span>(body_mass_kg) <span class="sc">~</span> species) <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">gf_theme</span>(<span class="fu">theme_bw</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">gf_labs</span>(<span class="at">x =</span> <span class="st">"Quarter Mile Time"</span>, <span class="at">y =</span> <span class="st">"MPG"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">gf_theme</span>(<span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">24</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -1124,10 +1124,10 @@ penguins |> ggplot(aes(x = species, y = body_mass_g)) +
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>f_sim <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">f</span>(<span class="fu">shuffle</span>(mpg) <span class="sc">~</span> qsec, </span>
-<span id="cb16-2"><a href="#cb16-2"></a>                         <span class="at">data =</span> mtcars)</span>
-<span id="cb16-3"><a href="#cb16-3"></a>pre_sim <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">pre</span>(<span class="fu">shuffle</span>(mpg) <span class="sc">~</span> qsec, </span>
-<span id="cb16-4"><a href="#cb16-4"></a>                         <span class="at">data =</span> mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>f_sim <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">f</span>(<span class="fu">shuffle</span>(mpg) <span class="sc">~</span> qsec, </span>
+<span id="cb16-2"><a></a>                         <span class="at">data =</span> mtcars)</span>
+<span id="cb16-3"><a></a>pre_sim <span class="ot">&lt;-</span> <span class="fu">do</span>(<span class="dv">1000</span>) <span class="sc">*</span> <span class="fu">pre</span>(<span class="fu">shuffle</span>(mpg) <span class="sc">~</span> qsec, </span>
+<span id="cb16-4"><a></a>                         <span class="at">data =</span> mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -1140,7 +1140,7 @@ penguins |> ggplot(aes(x = species, y = body_mass_g)) +
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>pre, <span class="at">data =</span> pre_sim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>pre, <span class="at">data =</span> pre_sim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -1154,7 +1154,7 @@ penguins |> ggplot(aes(x = species, y = body_mass_g)) +
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>f, <span class="at">data =</span> f_sim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>f, <span class="at">data =</span> f_sim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -1164,7 +1164,7 @@ penguins |> ggplot(aes(x = species, y = body_mass_g)) +
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>f, <span class="at">data =</span> f_sim, <span class="at">fill =</span> <span class="sc">~</span><span class="fu">upper</span>(f, .<span class="dv">05</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>f, <span class="at">data =</span> f_sim, <span class="at">fill =</span> <span class="sc">~</span><span class="fu">upper</span>(f, .<span class="dv">05</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -1174,14 +1174,14 @@ penguins |> ggplot(aes(x = species, y = body_mass_g)) +
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>f, <span class="at">data =</span> f_sim, <span class="at">fill =</span> <span class="sc">~</span><span class="fu">upper</span>(f, .<span class="dv">05</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">gf_vline</span>(<span class="at">xintercept =</span> <span class="fu">f</span>(res))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>f, <span class="at">data =</span> f_sim, <span class="at">fill =</span> <span class="sc">~</span><span class="fu">upper</span>(f, .<span class="dv">05</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a></a>  <span class="fu">gf_vline</span>(<span class="at">xintercept =</span> <span class="fu">f</span>(res))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
 <img data-src="14a_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section></section>
 <section>
-<section id="p-value" class="title-slide slide level1 agenda-slide center">
+<section id="p-value" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>P-Value</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -1209,8 +1209,8 @@ penguins |> ggplot(aes(x = species, y = body_mass_g)) +
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>f, <span class="at">data =</span> f_sim, <span class="at">fill =</span> <span class="sc">~</span> f <span class="sc">&gt;</span> <span class="fu">f</span>(res)) <span class="sc">%&gt;%</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">gf_vline</span>(<span class="at">xintercept =</span> <span class="fu">f</span>(res))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">gf_histogram</span>(<span class="sc">~</span>f, <span class="at">data =</span> f_sim, <span class="at">fill =</span> <span class="sc">~</span> f <span class="sc">&gt;</span> <span class="fu">f</span>(res)) <span class="sc">%&gt;%</span></span>
+<span id="cb21-2"><a></a>  <span class="fu">gf_vline</span>(<span class="at">xintercept =</span> <span class="fu">f</span>(res))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -1224,7 +1224,7 @@ penguins |> ggplot(aes(x = species, y = body_mass_g)) +
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">tally</span>(<span class="sc">~</span> f <span class="sc">&gt;</span> <span class="fu">f</span>(res), <span class="at">data =</span> f_sim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">tally</span>(<span class="sc">~</span> f <span class="sc">&gt;</span> <span class="fu">f</span>(res), <span class="at">data =</span> f_sim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>#&gt; f &gt; f(res)
@@ -1243,7 +1243,7 @@ penguins |> ggplot(aes(x = species, y = body_mass_g)) +
 </div>
 </section></section>
 <section>
-<section id="compute-mathematically" class="title-slide slide level1 agenda-slide center">
+<section id="compute-mathematically" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Compute Mathematically</h1>
 <div class="agenda-heading">
 <p>Learning Outcomes</p>
@@ -1334,8 +1334,10 @@ P= 0.000
 </div>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 <div class="reveal-header">
 <div class="header-logo">
@@ -1682,6 +1684,24 @@ P= 0.000
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("www\.inqs\.info\/m201_f24");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1718,7 +1738,11 @@ P= 0.000
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
