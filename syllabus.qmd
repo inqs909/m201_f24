@@ -118,7 +118,7 @@ The following outline may be subject to change. Any changes will be announced in
 | 9/9-9/13    | Exploring Categorical Data              | Ch 4       | 2       | 2      | 2                 |
 | 9/16-9/20   | Exploring Numerical Data                | Ch 5       | 3       | 3      | 3                 |
 | 9/23-9/27   | Simple Linear Regression                | Ch 7       | 4       | 4      | 4                 |
-| 9/30-10/4   | Exam #1/Multivariable Linear Regression | Ch 8       |         |        |                   |
+| 9/30-10/4   | Exam #1/Multivariable Linear Regression |            |         |        |                   |
 | 10/7-10/11  | Multivariable Linear Regression         | Ch 8       | 5       | 5      | 5                 |
 | 10/14-10/18 | Logistic Regression                     | Ch 9       | 6       | 6      | 6                 |
 | 10/21-10/25 | Hypothesis Testing                      | Ch 11      | 7       | 7      | 7                 |
