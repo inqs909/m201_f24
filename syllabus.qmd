@@ -1,10 +1,14 @@
 ---
 title: "Syllabus"
-editor: visual
+editor: source
 format:
   html: 
     code-fold: true
     html-math-method: katex
+  typst:
+    margin:
+      x: 1cm
+      y: 1cm
 ---
 
 ## Math 201: Elementary Statistics
@@ -41,14 +45,6 @@ Critical reasoning using a quantitative and statistical, problem-solving approac
 
 [Introduction to Modern Statistics](https://openintro-ims.netlify.app/)
 
-### Recommended Software
-
-For this course, we will use R and RStudio. You will have access to them online, but you may download and install them on your computer.
-
--   **R** is a free statistical software program that is available for download at: <https://www.r-project.org/>.
-
--   **RStudio** provides free and open source tools for your data analysis in R: <https://www.rstudio.com/>
-
 ### Embedded Peer Educator (EPE)
 
 This course will have two embedded peer educators:
@@ -59,10 +55,10 @@ An EPE is there to help you understand the material and succeed in the course. T
 
 | Category            | Percentage |
 |:--------------------|:-----------|
-| Reading Assignments | 10%        |
-| Lab Assignments     | 10%        |
-| Video Assignments   | 20%        |
-| Homework            | 15%        |
+| Participation       | 10%        |
+| Reading Assignments | 15%        |
+| Lab Assignments     | 15%        |
+| Video Assignments   | 15%        |
 | Exam 1              | 15%        |
 | Exam 2              | 15%        |
 | Exam 3              | 15%        |
@@ -81,17 +77,17 @@ Participation is based on short writing assignments conducted in class. There wi
 
 #### Lab Assignments
 
-Lab assignments are designed to expand your statistical knowledge. These will be completed in JupyterHub which can be accessed from Canvas. There are approximately 2 lab assignments every week that you can complete during class time. The lab assignment will be due either on Tuesday or Thursday at 11:59 PM following the lab day it was assigned.
+Lab assignments are designed to expand your statistical knowledge. These will be completed in Google Colab which can be accessed from Canvas. There is one lab every week that you can be completed during class time. The lab assignment will be due on Wednesday at 11:59 PM every week.
 
 #### Reading Assignments
 
-Reading assignments are designed to teach you different statistical concepts and R Programming. As the course progresses, many of the concepts build on each other. Therefore, the assignments encourage you to read each chapter in an appropriate amount of time. You must read the chapter and answer the questions by the Sunday night at 11:59 PM. The 2 lowest reading assignments will be dropped.
+Reading assignments are designed to teach you different statistical concepts and R Programming. As the course progresses, many of the concepts build on each other. Therefore, the assignments encourage you to read each chapter in an appropriate amount of time. You must read the chapter and answer the questions by the Sunday night at 11:59 PM. The 3 lowest reading assignments will be dropped.
 
 #### Video
 
-Starting on Week 2, there will be a weekly quiz every Friday. The quiz will become available for you to take on Canvas at 12AM to 11:59 PM every Friday. The quiz is designed to test whether you recall the material from the previous week. You are expected to complete the quiz with out using any material such as your notes, textbook, or internet. Additionally, you will get 90% of the quiz grade for simply taking the quiz. The remaining 10% is based on getting the question correct. There are a total of 12 quizzes in the semester. The lowest 3 quizzes will be dropped from your class grade. There are no make up quizzes.
+#### Book Practice Problems
 
-#### Homework
+Book practice problems are designed to give you extra practice to learn the statistical concepts. While these problems are not required for the course. It is highly recommend that you attempt the material to master the course.
 
 #### Exams
 
@@ -105,30 +101,35 @@ There will be **3** extra credit opportunities worth a total of 10% of your over
 
 The following outline may be subject to change. Any changes will be announced in class.
 
-| Week        | Topic                                   | Readings   | Lab Due | HW Due | Video Lecture Due |
-|:------------|:--------------------|:----------|:---------|----------|---------------------|
-| 8/26-8/30   | Welcome to College/Course               |            | 0       | 0      |                   |
-| 9/2-9/6     | Hello Data and Study Design             | Ch 1 and 2 | 1       | 1      | 1                 |
-| 9/9-9/13    | Exploring Categorical Data              | Ch 4       | 2       | 2      | 2                 |
-| 9/16-9/20   | Exploring Numerical Data                | Ch 5       | 3       | 3      | 3                 |
-| 9/23-9/27   | Simple Linear Regression                | Ch 7       | 4       | 4      | 4                 |
-| 9/30-10/4   | Exam #1/Multivariable Linear Regression |            |         |        |                   |
-| 10/7-10/11  | Multivariable Linear Regression         | Ch 8       | 5       | 5      | 5                 |
-| 10/14-10/18 | Logistic Regression                     | Ch 9       | 6       | 6      | 6                 |
-| 10/21-10/25 | Hypothesis Testing                      | Ch 11      | 7       | 7      | 7                 |
-| 10/28-11/1  | Bootstrap-based Confidence Intervals    | Ch 12      | 8       | 8      | 8                 |
-| 11/4-11/9   | Mathematical Models                     | Ch 13      | 9       | 9      | 9                 |
-| 11/11-11/15 | Exam #2                                 |            |         |        |                   |
-| 11/18-11/22 | Decision Errors                         | Ch 14      | 10      | 10     | 10                |
-| 11/25-11/29 | Linear Regression Inference             | Ch 24      |         |        |                   |
-| 12/2-12/6   | Logistic Regression Inference           | Ch 26      | 11      | 11     | 11                |
-| 12/4-12/8   | Exam #3                                 |            |         |        |                   |
+| Week        | Topic                                   | Readings   | Lab Due | Video Lecture Due |
+|:--------------|:--------------|:--------------|:--------------|---------------|
+| 8/26-8/30   | Welcome to College/Course               |            | 1       |                   |
+| 9/2-9/6     | Hello Data and Study Design             | Ch 1 and 2 | 2       | 1 and 2           |
+| 9/9-9/13    | Exploring Categorical Data              | Ch 4       | 3       | 3                 |
+| 9/16-9/20   | Exploring Numerical Data                | Ch 5       | 4       | 4                 |
+| 9/23-9/27   | Simple Linear Regression                | Ch 7       | 5       | 5                 |
+| 9/30-10/4   | Exam #1/Multivariable Linear Regression |            |         |                   |
+| 10/7-10/11  | Multivariable Linear Regression         | Ch 8       | 6       | 6                 |
+| 10/14-10/18 | Logistic Regression                     | Ch 9       | 7       | 7                 |
+| 10/21-10/25 | Hypothesis Testing                      | Ch 11      | 8       | 8                 |
+| 10/28-11/1  | Bootstrap-based Confidence Intervals    | Ch 12      | 9       | 9                 |
+| 11/4-11/9   | Mathematical Models                     | Ch 13      | 10      | 10                |
+| 11/11-11/15 | Exam #2                                 |            |         |                   |
+| 11/18-11/22 | Decision Errors                         | Ch 14      | 11      | 11                |
+| 11/25-11/29 | Linear Regression Inference             | Ch 24      |         |                   |
+| 12/2-12/6   | Logistic Regression Inference           | Ch 26      | 12      | 12                |
+| 12/4-12/8   | Exam #3                                 |            |         |                   |
+
+### Use of Generative Artificial Intelligence
+
+The use of generative artificial intelligence (AI) will be prohibited in class. This includes, but not limited to, ChatGPT, Meta AI, and Google Gemini.  
+
 
 ### University Policies
 
 1.  **Academic Honesty**:
 
-    Please conduct yourself with honesty and integrity. Do not submit others' work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.
+    Conduct yourself with honesty and integrity. Do not submit others' work as your own. For assignments and quizzes that allow you to work with a group, only put your name on what the group submits if you genuinely contributed to the work. Work completely independently on exams, using only the materials that are indicated as allowed. Failure to observe academic honesty results in substantial penalties that can include failing the course.
 
 2.  **Disabilities:**
 
