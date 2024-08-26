@@ -78,6 +78,13 @@ editor: source
 
 ## EPE - Louis Heer
 
+:::: {.columns}
+
+::: {.column width="50%"}
+![](img/Headshot.jpg)
+:::
+
+::: {.column width="50%"}
 -   3rd Year
 
 -   Political Science Major
@@ -86,11 +93,10 @@ editor: source
   -   Elementary Statistics
   -   Statistics for Biologists
   -   Statistics Application for Political Science
+:::
 
+::::
 
-# Syllabus
-
-[m201.inqs.info/syllabus](https://m201.inqs.info/syllabus.html)
 
 # Early Success Module
 
@@ -111,9 +117,37 @@ editor: source
 ::: {.column width="50%"}
 -   Bloom's Taxonomy
 -   Using the Study Cycle Efficiently
+-   Selfie at favorite place
+-   Selfie with support staff
+-   The Feynman Technique
 :::
 
 ::::
+
+# Class Setup
+
+## Class Setup
+
+-   Participation
+-   Reading Assignments
+-   Notebook Assignments
+-   Video Assignments
+-   Exams
+-   Extra Credit
+
+## Study Expectations.
+
+For every 1 unit of class you take, you are expected to spend ~3 hours outside of class for the course.
+
+## Syllabus
+
+[m201.inqs.info/syllabus](https://m201.inqs.info/syllabus.html)
+
+## R Programming
+
+This class you will use R programming to coduct data analysis.
+
+R is a powerful tool that allows you to 
 
 # Statistics Activity
 
@@ -233,13 +267,6 @@ NO
 
 ::: fragment
 What we should do is demand companies to develop these tools in an ethical manner!
-:::
-
-
-## How do I know all this stuff?
-
-::: fragment
-![](https://y.yarn.co/747cab9b-9b48-4f39-9a6f-5da4ba440975_text.gif){fig-align="center"}
 :::
 
 

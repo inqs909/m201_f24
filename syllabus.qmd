@@ -47,7 +47,7 @@ Critical reasoning using a quantitative and statistical, problem-solving approac
 
 ### Embedded Peer Educator (EPE)
 
-This course will have two embedded peer educators:
+Louis Heer is your embeded peer educator for this course.
 
 An EPE is there to help you understand the material and succeed in the course. They will be leading in class assignments. hold special tutoring sessions, and support you in your R programming. These educators are trained with study skills that will set you up with success in college.
 
