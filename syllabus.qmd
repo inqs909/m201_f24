@@ -23,7 +23,7 @@ format:
 
 **Office Location:** BTE 2840
 
-**Office Hours:**
+**Office Hours:** MW 5-6 PM T 10AM-12PM
 
 Or by Zoom appointment.
 
@@ -53,15 +53,15 @@ An EPE is there to help you understand the material and succeed in the course. T
 
 ### Course Grading
 
-| Category            | Percentage |
-|:--------------------|:-----------|
-| Participation       | 10%        |
-| Reading Assignments | 15%        |
-| Lab Assignments     | 15%        |
-| Video Assignments   | 15%        |
-| Exam 1              | 15%        |
-| Exam 2              | 15%        |
-| Exam 3              | 15%        |
+| Category             | Percentage |
+|:---------------------|:-----------|
+| Participation        | 10%        |
+| Reading Assignments  | 15%        |
+| Notebook Assignments | 15%        |
+| Video Assignments    | 15%        |
+| Exam 1               | 15%        |
+| Exam 2               | 15%        |
+| Exam 3               | 15%        |
 
 At the end of the quarter, course grades will be assigned according to the following scale:
 
@@ -75,9 +75,9 @@ At the end of the quarter, course grades will be assigned according to the follo
 
 Participation is based on short writing assignments conducted in class. There will be no make ups for these writing prompts.
 
-#### Lab Assignments
+#### Notebook Assignments
 
-Lab assignments are designed to expand your statistical knowledge. These will be completed in Google Colab which can be accessed from Canvas. There is one lab every week that you can be completed during class time. The lab assignment will be due on Wednesday at 11:59 PM every week.
+Notebook assignments are designed to expand your statistical knowledge. These will be completed in Google Colab which can be accessed from Canvas. There is one notebook assignments every week that you can be completed during class time. The notebook assignment will be due on Wednesday at 11:59 PM every week.
 
 #### Reading Assignments
 
@@ -101,7 +101,7 @@ There will be **3** extra credit opportunities worth a total of 10% of your over
 
 The following outline may be subject to change. Any changes will be announced in class.
 
-| Week        | Topic                                   | Readings   | Lab Due | Video Lecture Due |
+| Week        | Topic                                   | Readings   | NB Due | Video Lecture Due |
 |:--------------|:--------------|:--------------|:--------------|---------------|
 | 8/26-8/30   | Welcome to College/Course               |            | 1       |                   |
 | 9/2-9/6     | Hello Data and Study Design             | Ch 1 and 2 | 2       | 1 and 2           |
@@ -139,6 +139,3 @@ The use of generative artificial intelligence (AI) will be prohibited in class. 
 
     CSUCI is following guidelines and public orders from the California Department of Public Health and Ventura County Public Health for the COVID-19 pandemic as it pertains to CSUCI students, employees and visitors on the campus. Students are expected to adhere to all health and safety requirements as noted on the University's Spring 2023 Semester [website](https://www.csuci.edu/news/campus-updates/covid-19/index.htm) or they may be subject to removal from the classroom.
 
-### Important note about a possible work stoppage during the semester
-
-The California Faculty Association (the labor union of Lecturers, Professors, Coaches, Counselors, and Librarians across the 23 CSU campuses) is in a difficult contract dispute with California State University management. It is possible that we will call a strike or other work stoppage this term. I promise to promptly inform you of any schedule disruption. Our working conditions are your learning conditions; we seek to protect both. For further information go to www.CFAbargaining.org.
