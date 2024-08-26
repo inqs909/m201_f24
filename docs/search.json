@@ -2310,6 +2310,13 @@
     "text": "Study Desing and Causal Inference\n\nCausal Inference What IF\n\nHernán and Robins\n\nDesign of Observational Studies\n\nRosenbaum\n\n\nBolded Titles, I have read thoroughly."
   },
   {
+    "objectID": "c/1a.html#slides",
+    "href": "c/1a.html#slides",
+    "title": "Welcome!",
+    "section": "Slides",
+    "text": "Slides\nm201.inqs.info/c/1a"
+  },
+  {
     "objectID": "c/1a.html#learning-outcomes",
     "href": "c/1a.html#learning-outcomes",
     "title": "Welcome!",
@@ -2377,7 +2384,7 @@
     "href": "c/1a.html#r-programming",
     "title": "Welcome!",
     "section": "R Programming",
-    "text": "R Programming\nThis class you will use R programming to coduct data analysis.\nR is a powerful tool that allows you to"
+    "text": "R Programming\nThis class you will use R programming to conduct data analysis.\nR is a powerful tool that allows you to program complex tasks.\nLearning R is difficult, but it is the best teacher to teach you how to overcome challenges. Don’t give up when it gets hard and seek out help when needed."
   },
   {
     "objectID": "c/1a.html#when-do-you-use-statistics",

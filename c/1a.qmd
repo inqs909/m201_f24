@@ -33,6 +33,10 @@ filters:
 editor: source
 ---
 
+## Slides
+
+[m201.inqs.info/c/1a](https://m201.inqs.info/c/1a#/title-slide)
+
 ## Learning Outcomes
 
 -   Introductions
@@ -145,9 +149,11 @@ For every 1 unit of class you take, you are expected to spend ~3 hours outside o
 
 ## R Programming
 
-This class you will use R programming to coduct data analysis.
+This class you will use R programming to conduct data analysis.
 
-R is a powerful tool that allows you to 
+R is a powerful tool that allows you to program complex tasks.
+
+Learning R is difficult, but it is the best teacher to teach you how to overcome challenges. Don't give up when it gets hard and seek out help when needed.
 
 # Statistics Activity
 
