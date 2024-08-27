@@ -9,7 +9,7 @@ format:
     html-math-method: katex
 ---
 
-Provide a summary of one book below, an write a brief analysis in supporting or opposing the book, and a personal reaction of the book. The majority of these books are available through the Broome Library.
+Provide a summary of one book below, an write a brief analysis in supporting or opposing the book, and connect key elements of the book to your every day life. The majority of these books are available through the Broome Library.
 
 **Books:**
 
@@ -39,6 +39,6 @@ Report guidelines
 
 -   Submit a pdf of your work to Canvas
 
--   **Due 12/4/2023**
+-   **Due 12/4/2024**
 
 **Worth 3 final grade percentage points.**
