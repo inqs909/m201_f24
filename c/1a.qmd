@@ -236,7 +236,7 @@ The [LA Times](https://www.latimes.com/opinion/story/2024-08-15/editorial-genera
 :::
 
 ::: fragment
-Additionally, [Time](https://time.com/6987773/ai-data-centers-energy-usage-climate-change/) reports that a ChatGPT query uses ten times more energy than a Google search quer, and global AI demands can consume of 1 trillion gallons of water by 2027.
+Additionally, [Time](https://time.com/6987773/ai-data-centers-energy-usage-climate-change/) reports that a ChatGPT query uses ten times more energy than a Google search query, and global AI demands can consume of 1 trillion gallons of water by 2027.
 :::
 
 ::: fragment

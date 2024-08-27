@@ -83,11 +83,9 @@ Notebook assignments are designed to expand your statistical knowledge. These wi
 
 Reading assignments are designed to teach you different statistical concepts and R Programming. As the course progresses, many of the concepts build on each other. Therefore, the assignments encourage you to read each chapter in an appropriate amount of time. You must read the chapter and answer the questions by the Sunday night at 11:59 PM. The 3 lowest reading assignments will be dropped.
 
-#### Video
+#### Video Lectures
 
-#### Book Practice Problems
-
-Book practice problems are designed to give you extra practice to learn the statistical concepts. While these problems are not required for the course. It is highly recommend that you attempt the material to master the course.
+Videos are used to teach statistical concepts related to the course. Students are expected to watch at least one video a week. The videos are implemented using PlayPosit, where questions are embedded in the video to check for understanding. The videos may require students to program and/or read research articles.
 
 #### Exams
 
