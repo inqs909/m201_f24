@@ -1,5 +1,5 @@
 ---
-title: "Categorical Data"
+title: "Numerical Data"
 format:
   revealjs:
     scrollable: true
@@ -57,6 +57,16 @@ theme_set(theme_bw())
 ```
 
 # Summary Statistics
+
+## What is numerical data?
+
+```{r}
+#| echo: true
+#| eval: true
+
+trashwheel$PlasticBottles
+```
+
 
 ## Summary Statistics
 
@@ -257,7 +267,6 @@ num_stats(DATA$VAR)
 ```{r}
 num_stats(trashwheel$PlasticBottles)
 ```
-
 
 # Data Visualization
 
