@@ -411,7 +411,7 @@ When working with skewed data, it may be beneficial to transform the data to ide
 ::: fragment
 -   $Y = \ln(X)$
 -   $Y = \frac{1}{X}$
--   $Y = \sqrt X $
+-   $Y = \sqrt X$
 :::
 
 ## Example
@@ -502,7 +502,7 @@ p1 <- ggplot(tibble(x, y = y), aes(x, y)) +
 
 p2 <- ggplot(tibble(x, y = yy), aes(x, y)) +
   geom_point() + 
-  ggtitle("Negative Positive") +
+  ggtitle("Weak Negative") +
   theme_bw()
 
 p1 + p2

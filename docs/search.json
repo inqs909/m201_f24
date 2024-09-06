@@ -109,7 +109,7 @@
     "href": "lectures/4.html#mean",
     "title": "Numerical Data",
     "section": "Mean",
-    "text": "Mean\nDescribe how you will find the mean of these numbers:\n\n\n#&gt; [1] 14 12 13 15 18"
+    "text": "Mean\nDescribe how you will find the mean of these numbers:\n\n\n#&gt; [1] 20 18 20 20 15"
   },
   {
     "objectID": "lectures/4.html#mean-1",
@@ -312,7 +312,7 @@
     "href": "lectures/4.html#transformed-data-1",
     "title": "Numerical Data",
     "section": "Transformed Data",
-    "text": "Transformed Data\nWhen working with skewed data, it may be beneficial to transform the data to identify trends.\n\n\n\\(Y = \\ln(X)\\)\n\\(Y = \\frac{1}{X}\\)\n$Y = X $"
+    "text": "Transformed Data\nWhen working with skewed data, it may be beneficial to transform the data to identify trends.\n\n\n\\(Y = \\ln(X)\\)\n\\(Y = \\frac{1}{X}\\)\n\\(Y = \\sqrt X\\)"
   },
   {
     "objectID": "lectures/4.html#example",
