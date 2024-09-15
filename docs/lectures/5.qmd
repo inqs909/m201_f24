@@ -548,11 +548,13 @@ $$
 $$
 \hat Y_i = 3706 + 26.92 (0) + 1386.27 (0)
 $$
+
 ## Finding the Chinstrap MASS
 
 $$
 \hat Y_i = 3706 + 26.92 (1) + 1386.27 (0)
 $$
+
 ## Finding the Gentoo MASS
 
 $$

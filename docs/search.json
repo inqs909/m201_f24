@@ -4778,7 +4778,21 @@
     "href": "lectures/5.html#finding-the-adelie-mass",
     "title": "Linear Regression",
     "section": "Finding the Adelie MASS",
-    "text": "Finding the Adelie MASS\n\\[\n\\hat Y_i = 3706 + 26.92 (0) + 1386.27 (0)\n\\] ## Finding the Chinstrap MASS\n\\[\n\\hat Y_i = 3706 + 26.92 (1) + 1386.27 (0)\n\\] ## Finding the Gentoo MASS\n\\[\n\\hat Y_i = 3706 + 26.92 (0) + 1386.27 (1)\n\\]"
+    "text": "Finding the Adelie MASS\n\\[\n\\hat Y_i = 3706 + 26.92 (0) + 1386.27 (0)\n\\]"
+  },
+  {
+    "objectID": "lectures/5.html#finding-the-chinstrap-mass",
+    "href": "lectures/5.html#finding-the-chinstrap-mass",
+    "title": "Linear Regression",
+    "section": "Finding the Chinstrap MASS",
+    "text": "Finding the Chinstrap MASS\n\\[\n\\hat Y_i = 3706 + 26.92 (1) + 1386.27 (0)\n\\]"
+  },
+  {
+    "objectID": "lectures/5.html#finding-the-gentoo-mass",
+    "href": "lectures/5.html#finding-the-gentoo-mass",
+    "title": "Linear Regression",
+    "section": "Finding the Gentoo MASS",
+    "text": "Finding the Gentoo MASS\n\\[\n\\hat Y_i = 3706 + 26.92 (0) + 1386.27 (1)\n\\]"
   },
   {
     "objectID": "lectures/5.html#intepreting-hat-beta_1",
