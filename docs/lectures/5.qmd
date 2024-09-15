@@ -573,7 +573,7 @@ On average, Gentoo has a larger mass than Adelie by about 1386.27 grams.
 
 ## Correlation
 
-Correlation is a statistics that can be used to describe the strenth of the relationship between 2 continuous variables.
+Correlation is a statistics that can be used to describe the strength of the relationship between 2 continuous variables.
 
 ::: fragment
 $$

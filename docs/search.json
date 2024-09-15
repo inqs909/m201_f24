@@ -4813,7 +4813,7 @@
     "href": "lectures/5.html#correlation",
     "title": "Linear Regression",
     "section": "Correlation",
-    "text": "Correlation\nCorrelation is a statistics that can be used to describe the strenth of the relationship between 2 continuous variables.\n\n\\[\nr = \\frac{1}{n-1}\\sum^n_{i=1}\\frac{x_i - \\bar x}{s_x}\\frac{y_i - \\bar y}{s_y}\n\\]\n\n\\(\\bar x\\), \\(\\bar y\\): sample means\n\\(s_x\\), \\(s_y\\): sample standard deviations\n\n\n\n\\[\n-1 \\leq r \\leq 1\n\\]"
+    "text": "Correlation\nCorrelation is a statistics that can be used to describe the strength of the relationship between 2 continuous variables.\n\n\\[\nr = \\frac{1}{n-1}\\sum^n_{i=1}\\frac{x_i - \\bar x}{s_x}\\frac{y_i - \\bar y}{s_y}\n\\]\n\n\\(\\bar x\\), \\(\\bar y\\): sample means\n\\(s_x\\), \\(s_y\\): sample standard deviations\n\n\n\n\\[\n-1 \\leq r \\leq 1\n\\]"
   },
   {
     "objectID": "lectures/5.html#correlations",
