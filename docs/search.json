@@ -4568,7 +4568,14 @@
     "href": "lectures/5.html#estimated-value",
     "title": "Linear Regression",
     "section": "Estimated Value",
-    "text": "Estimated Value\n\\[\n\\hat Y_i = \\hat \\beta_0\n\\] ## Estimation\nTo estimate \\(\\hat \\beta_0\\), we minimize the follow function:\n\\[\n\\sum^n_{i=1} (Y_i-\\hat Y_i)^2\n\\]\n\nThis is known as the sum squared errors, SSE"
+    "text": "Estimated Value\n\\[\n\\hat Y_i = \\hat \\beta_0\n\\]"
+  },
+  {
+    "objectID": "lectures/5.html#estimation",
+    "href": "lectures/5.html#estimation",
+    "title": "Linear Regression",
+    "section": "Estimation",
+    "text": "Estimation\nTo estimate \\(\\hat \\beta_0\\), we minimize the follow function:\n\\[\n\\sum^n_{i=1} (Y_i-\\hat Y_i)^2\n\\]\n\nThis is known as the sum squared errors, SSE"
   },
   {
     "objectID": "lectures/5.html#residuals",

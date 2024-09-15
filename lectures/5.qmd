@@ -214,6 +214,7 @@ $$
 $$
 \hat Y_i = \hat \beta_0
 $$
+
 ## Estimation 
 
 To estimate $\hat \beta_0$, we minimize the follow function:
