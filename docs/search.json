@@ -4468,7 +4468,7 @@
   {
     "objectID": "lectures/5.html#explaining-variation",
     "href": "lectures/5.html#explaining-variation",
-    "title": "Linear Regression",
+    "title": "Multivariable Linear Regression",
     "section": "Explaining Variation",
     "text": "Explaining Variation\n\nThis is the process where we try to reduce the variation with the use of other variables.\n\n\nCan be thought of as getting it less wrong when taking an educated guess."
   },
@@ -5136,5 +5136,285 @@
     "title": "Categorical Data",
     "section": "Themes",
     "text": "Themes\nThe R packages ThemePark and ggthemes allows you to change the overall look of a plot.\n\nAll you need to do is add the theme to the plot."
+  },
+  {
+    "objectID": "lectures/5.html#taylor-swifts-songs-danceability",
+    "href": "lectures/5.html#taylor-swifts-songs-danceability",
+    "title": "Multivariable Linear Regression",
+    "section": "Taylor Swift’s Songs Danceability",
+    "text": "Taylor Swift’s Songs Danceability\n\n\nCode\nggplot(taylor_album_songs, aes(danceability)) +\n  geom_density()"
+  },
+  {
+    "objectID": "lectures/5.html#explaining-danceability-by-album",
+    "href": "lectures/5.html#explaining-danceability-by-album",
+    "title": "Multivariable Linear Regression",
+    "section": "Explaining Danceability by Album",
+    "text": "Explaining Danceability by Album\n\n\nCode\nggplot(taylor_album_songs, aes(danceability)) +\n  geom_density() +\n  facet_wrap(~ album_name)"
+  },
+  {
+    "objectID": "lectures/5.html#explaining-danceability-by-valence",
+    "href": "lectures/5.html#explaining-danceability-by-valence",
+    "title": "Multivariable Linear Regression",
+    "section": "Explaining Danceability by Valence",
+    "text": "Explaining Danceability by Valence\n\n\nCode\nggplot(taylor_album_songs, aes(valence, danceability)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "lectures/5.html#explaining-danceability-by-energy",
+    "href": "lectures/5.html#explaining-danceability-by-energy",
+    "title": "Multivariable Linear Regression",
+    "section": "Explaining Danceability by Energy",
+    "text": "Explaining Danceability by Energy\n\n\nCode\nggplot(taylor_album_songs, aes(energy, danceability)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "lectures/5.html#modelling-danceability",
+    "href": "lectures/5.html#modelling-danceability",
+    "title": "Multivariable Linear Regression",
+    "section": "Modelling Danceability",
+    "text": "Modelling Danceability\nHow do we use all the variables to explain danceability?"
+  },
+  {
+    "objectID": "lectures/5.html#mlr",
+    "href": "lectures/5.html#mlr",
+    "title": "Multivariable Linear Regression",
+    "section": "MLR",
+    "text": "MLR\nMultivariable Linear Regression (MLR) is used to model an outcome variable (\\(Y\\)) by multiple predictor variables (\\(X_1, X_2, \\ldots, X_p\\)).\n\nUsing MLR, you propose that the ouctome variable was constructed from a set of predictors, with their corresponding regression coefficients (\\(\\beta\\)), and a bit of error\n\n\n\\[\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\varepsilon\n\\]\n\\[\n\\varepsilon \\sim DGP\n\\]"
+  },
+  {
+    "objectID": "lectures/5.html#model",
+    "href": "lectures/5.html#model",
+    "title": "Multivariable Linear Regression",
+    "section": "Model",
+    "text": "Model\n\\[\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\varepsilon\n\\]\n\\[\n\\varepsilon \\sim DGP\n\\]"
+  },
+  {
+    "objectID": "lectures/6.html#explaining-variation",
+    "href": "lectures/6.html#explaining-variation",
+    "title": "Multivariable Linear Regression",
+    "section": "Explaining Variation",
+    "text": "Explaining Variation\n\nThis is the process where we try to reduce the variation with the use of other variables.\n\n\nCan be thought of as getting it less wrong when taking an educated guess."
+  },
+  {
+    "objectID": "lectures/6.html#taylor-swifts-songs-danceability",
+    "href": "lectures/6.html#taylor-swifts-songs-danceability",
+    "title": "Multivariable Linear Regression",
+    "section": "Taylor Swift’s Songs Danceability",
+    "text": "Taylor Swift’s Songs Danceability\n\n\nCode\nggplot(taylor_album_songs, aes(danceability)) +\n  geom_density()"
+  },
+  {
+    "objectID": "lectures/6.html#explaining-danceability-by-album",
+    "href": "lectures/6.html#explaining-danceability-by-album",
+    "title": "Multivariable Linear Regression",
+    "section": "Explaining Danceability by Album",
+    "text": "Explaining Danceability by Album\n\n\nCode\nggplot(taylor_album_songs, aes(danceability)) +\n  geom_density() +\n  facet_wrap(~ album_name)"
+  },
+  {
+    "objectID": "lectures/6.html#explaining-danceability-by-valence",
+    "href": "lectures/6.html#explaining-danceability-by-valence",
+    "title": "Multivariable Linear Regression",
+    "section": "Explaining Danceability by Valence",
+    "text": "Explaining Danceability by Valence\n\n\nCode\nggplot(taylor_album_songs, aes(valence, danceability)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "lectures/6.html#explaining-danceability-by-energy",
+    "href": "lectures/6.html#explaining-danceability-by-energy",
+    "title": "Multivariable Linear Regression",
+    "section": "Explaining Danceability by Energy",
+    "text": "Explaining Danceability by Energy\n\n\nCode\nggplot(taylor_album_songs, aes(energy, danceability)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "lectures/6.html#modelling-danceability",
+    "href": "lectures/6.html#modelling-danceability",
+    "title": "Multivariable Linear Regression",
+    "section": "Modelling Danceability",
+    "text": "Modelling Danceability\nHow do we use all the variables to explain danceability?"
+  },
+  {
+    "objectID": "lectures/6.html#mlr",
+    "href": "lectures/6.html#mlr",
+    "title": "Multivariable Linear Regression",
+    "section": "MLR",
+    "text": "MLR\nMultivariable Linear Regression (MLR) is used to model an outcome variable (\\(Y\\)) by multiple predictor variables (\\(X_1, X_2, \\ldots, X_p\\)).\n\nUsing MLR, you propose that the ouctome variable was constructed from a set of predictors, with their corresponding regression coefficients (\\(\\beta\\)), and a bit of error\n\n\n\\[\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\varepsilon\n\\]\n\\[\n\\varepsilon \\sim DGP\n\\]"
+  },
+  {
+    "objectID": "lectures/6.html#model-data",
+    "href": "lectures/6.html#model-data",
+    "title": "Multivariable Linear Regression",
+    "section": "Model Data",
+    "text": "Model Data\n\\[\nY = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + \\cdots + \\beta_p X_p + \\varepsilon\n\\]\n\\[\n\\varepsilon \\sim DGP\n\\]\n\n\\[\nY_i = \\beta_0 + \\beta_1 X_{i1} + \\beta_2 X_{i2} + \\cdots + \\beta_p X_{ip} + \\varepsilon_i\n\\]\n\\[\n\\varepsilon_i \\sim DGP\n\\]"
+  },
+  {
+    "objectID": "lectures/6.html#unknown-parameters",
+    "href": "lectures/6.html#unknown-parameters",
+    "title": "Multivariable Linear Regression",
+    "section": "Unknown Parameters",
+    "text": "Unknown Parameters\n\\[\nY_i = \\beta_0 + \\beta_1 X_{i1} + \\beta_2 X_{i2} + \\cdots + \\beta_p X_{ip} + \\varepsilon_i\n\\]\n\n\\[\n\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\ldots, \\beta_p\n\\]"
+  },
+  {
+    "objectID": "lectures/6.html#estimated-model",
+    "href": "lectures/6.html#estimated-model",
+    "title": "Multivariable Linear Regression",
+    "section": "Estimated Model",
+    "text": "Estimated Model\n\\[\nY_i = \\beta_0 + \\beta_1 X_{i1} + \\beta_2 X_{i2} + \\cdots + \\beta_p X_{ip} + \\varepsilon_i\n\\]\n\\[\n\\hat Y_i = \\hat\\beta_0 + \\hat\\beta_1 X_{i1} + \\hat\\beta_2 X_{i2} + \\cdots + \\hat\\beta_p X_{ip}\n\\]"
+  },
+  {
+    "objectID": "lectures/6.html#estimating-prameters",
+    "href": "lectures/6.html#estimating-prameters",
+    "title": "Multivariable Linear Regression",
+    "section": "Estimating Prameters",
+    "text": "Estimating Prameters\n\\(\\beta_0, \\beta_1, \\beta_2, \\beta_3, \\ldots, \\beta_p\\) are estimated by minimizing the following function:\n\\[\n\\sum^n_{i=1} (Y_i-\\hat Y_i)^2\n\\]"
+  },
+  {
+    "objectID": "lectures/6.html#fitting-a-model-in-r",
+    "href": "lectures/6.html#fitting-a-model-in-r",
+    "title": "Multivariable Linear Regression",
+    "section": "Fitting a Model in R",
+    "text": "Fitting a Model in R\n\n\nCode\nlm(Y ~ X1 + X2 + ... + Xp, data = DATA)"
+  },
+  {
+    "objectID": "lectures/6.html#explaining-danceability-by-mode_name",
+    "href": "lectures/6.html#explaining-danceability-by-mode_name",
+    "title": "Multivariable Linear Regression",
+    "section": "Explaining Danceability by mode_name",
+    "text": "Explaining Danceability by mode_name\n\n\nCode\ntaylor_album_songs |&gt; \n  drop_na(mode_name) |&gt; \n  ggplot(aes(danceability)) +\n  geom_density() +\n  facet_wrap(~ mode_name)"
+  },
+  {
+    "objectID": "lectures/6.html#modelling-danceability-1",
+    "href": "lectures/6.html#modelling-danceability-1",
+    "title": "Multivariable Linear Regression",
+    "section": "Modelling Danceability",
+    "text": "Modelling Danceability\n\n\nCode\nlm(danceability ~ mode_name + valence + energy, \n   data = taylor_album_songs)\n\n\n#&gt; \n#&gt; Call:\n#&gt; lm(formula = danceability ~ mode_name + valence + energy, data = taylor_album_songs)\n#&gt; \n#&gt; Coefficients:\n#&gt;    (Intercept)  mode_nameminor         valence          energy  \n#&gt;        0.53753         0.07322         0.17872        -0.06349"
+  },
+  {
+    "objectID": "lectures/6.html#estimated-model-1",
+    "href": "lectures/6.html#estimated-model-1",
+    "title": "Multivariable Linear Regression",
+    "section": "Estimated Model",
+    "text": "Estimated Model\n\\[\ndance = 0.54 + 0.07\\times Minor + 0.18 \\times valence - 0.06 \\times energy\n\\]"
+  },
+  {
+    "objectID": "lectures/6.html#danceability-by-mode_name",
+    "href": "lectures/6.html#danceability-by-mode_name",
+    "title": "Multivariable Linear Regression",
+    "section": "Danceability by mode_name",
+    "text": "Danceability by mode_name\n\n\nCode\ntaylor_album_songs |&gt; \n  drop_na(mode_name) |&gt; \n  ggplot(aes(danceability)) +\n  geom_density() +\n  facet_wrap(~ mode_name)"
+  },
+  {
+    "objectID": "lectures/6.html#danceability-by-valence",
+    "href": "lectures/6.html#danceability-by-valence",
+    "title": "Multivariable Linear Regression",
+    "section": "Danceability by Valence",
+    "text": "Danceability by Valence\n\n\nCode\nggplot(taylor_album_songs, aes(valence, danceability)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "lectures/6.html#danceability-by-energy",
+    "href": "lectures/6.html#danceability-by-energy",
+    "title": "Multivariable Linear Regression",
+    "section": "Danceability by Energy",
+    "text": "Danceability by Energy\n\n\nCode\nggplot(taylor_album_songs, aes(energy, danceability)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "lectures/6.html#hat-beta_i-representation",
+    "href": "lectures/6.html#hat-beta_i-representation",
+    "title": "Multivariable Linear Regression",
+    "section": "\\(\\hat \\beta_i\\) Representation",
+    "text": "\\(\\hat \\beta_i\\) Representation\nEach regression coefficient \\(\\beta_i\\) represents how the predictor variable changes the outcome, as it increase by 1 unit.\n\nFor categorical dummy variables, the \\(\\beta_i\\) represents how the outcome will change when the data point belongs to that value."
+  },
+  {
+    "objectID": "lectures/6.html#intepreting-minor-coefficient",
+    "href": "lectures/6.html#intepreting-minor-coefficient",
+    "title": "Multivariable Linear Regression",
+    "section": "Intepreting Minor coefficient",
+    "text": "Intepreting Minor coefficient\n\\[\ndance = 0.54 + 0.07 Minor + 0.18 valence - 0.06 energy\n\\] Minor song’s average danceability score is 0.07 units higher compared to Major song’s, adjusting for valence and energy."
+  },
+  {
+    "objectID": "lectures/6.html#hat-beta_i-interpretation",
+    "href": "lectures/6.html#hat-beta_i-interpretation",
+    "title": "Multivariable Linear Regression",
+    "section": "\\(\\hat \\beta_i\\) Interpretation",
+    "text": "\\(\\hat \\beta_i\\) Interpretation\nFor \\(hat \\beta_i\\), which is the regression coefficient (slope) of \\(X_i\\):\nAs \\(X_i\\) increases by 1 unit, the outcome (\\(Y\\) will increase/decrease by \\(\\hat \\beta_i\\) units, adjusting for all other predictor variables.\n\nFor categorical dummy variables \\(X_i\\):\nThe outcome \\(Y_i\\) increases/decreases by \\(\\beta_i\\) units for category \\(X_i\\) compared to the reference category. adjusting for all other predictor variables."
+  },
+  {
+    "objectID": "lectures/6.html#intepreting-valence-coefficient",
+    "href": "lectures/6.html#intepreting-valence-coefficient",
+    "title": "Multivariable Linear Regression",
+    "section": "Intepreting valence coefficient",
+    "text": "Intepreting valence coefficient\n\\[\ndance = 0.54 + 0.07Minor + 0.18  valence - 0.06 energy\n\\]\nAs valence increases by 1 unit, danceability increases by an average of 0.18 units, adjusting for energy and type of song."
+  },
+  {
+    "objectID": "lectures/6.html#intepreting-energy-coefficient",
+    "href": "lectures/6.html#intepreting-energy-coefficient",
+    "title": "Multivariable Linear Regression",
+    "section": "Intepreting energy coefficient",
+    "text": "Intepreting energy coefficient\n\\[\ndance = 0.54 + 0.07 Minor + 0.18 valence - 0.06 energy\n\\]\nAs energy increases by 1 unit, danceability decreases by an average of 0.06 units, adjusting for valence and type of song."
+  },
+  {
+    "objectID": "lectures/6.html#r2",
+    "href": "lectures/6.html#r2",
+    "title": "Multivariable Linear Regression",
+    "section": "\\(R^2\\)",
+    "text": "\\(R^2\\)\nComputing \\(R^2\\) is done by determine how much the variation in the outcome is explained by model and divided by the variation of the outcome.\n\\[\nR^2 = \\frac{\\text{variation explained by model}}{\\text{variation from outcome}} \\\\\n= 1-\\frac{\\text{variation of residuals}}{\\text{variation from outcome}}\n\\] ## \\(R^2\\)\nProblems arise when multiple predictors are added model. As a new predictor is added to the model, new information is added to the model which will always reduce the variation in the residuals. Therefore, the \\(R^2\\) will always increase."
+  },
+  {
+    "objectID": "lectures/6.html#problems-with-r2-in-mlr",
+    "href": "lectures/6.html#problems-with-r2-in-mlr",
+    "title": "Multivariable Linear Regression",
+    "section": "Problems with \\(R^2\\) in MLR",
+    "text": "Problems with \\(R^2\\) in MLR\nWhen the number of variables increase, the regular \\(R²\\) will be biased in its prediction capability when new data is obtained.\n\nTherefore, statisticians uses the adjusted \\(R^2\\), that penalizes the model when more variables are added. This ensures that a variable added will have a significant effect in predicting outcomes."
+  },
+  {
+    "objectID": "lectures/6.html#adjusted-r2-1",
+    "href": "lectures/6.html#adjusted-r2-1",
+    "title": "Multivariable Linear Regression",
+    "section": "Adjusted \\(R^2\\)",
+    "text": "Adjusted \\(R^2\\)\n\\[\nR_a^2 = 1-\\frac{\\text{variation of residuals}}{\\text{variation from outcome}}\\times \\frac{n-1}{n-k-1}\n\\] - \\(n\\): Number of data points - \\(k\\): Number of predictor variables in the model"
+  },
+  {
+    "objectID": "lectures/6.html#adjusted-r2-in-r",
+    "href": "lectures/6.html#adjusted-r2-in-r",
+    "title": "Multivariable Linear Regression",
+    "section": "Adjusted \\(R^2\\) in R",
+    "text": "Adjusted \\(R^2\\) in R\n\n\nCode\nxlm &lt;- lm(Y ~ X1 + X2 + ... + Xp, data = DATA)\nar2(xlm)"
+  },
+  {
+    "objectID": "lectures/6.html#example",
+    "href": "lectures/6.html#example",
+    "title": "Multivariable Linear Regression",
+    "section": "Example",
+    "text": "Example\n\n\nCode\nxlm &lt;- lm(danceability ~ mode_name + valence + energy, \n   data = taylor_album_songs)\nar2(xlm)\n\n\n#&gt; [1] 0.09275039\n\n\n9% of the variation in danceability is explained by the model."
+  },
+  {
+    "objectID": "lectures/6.html#model-selection-1",
+    "href": "lectures/6.html#model-selection-1",
+    "title": "Multivariable Linear Regression",
+    "section": "Model Selection",
+    "text": "Model Selection\nModel Selection is the process of obtaining a “final” model containing all the necessary predictors, and eliminating any that are not necessary."
+  },
+  {
+    "objectID": "lectures/6.html#forward-selection",
+    "href": "lectures/6.html#forward-selection",
+    "title": "Multivariable Linear Regression",
+    "section": "Forward Selection",
+    "text": "Forward Selection\nBegin with the null model (\\(Y\\sim 1\\)) and add variables until a final model is chosen."
+  },
+  {
+    "objectID": "lectures/6.html#backward-selection",
+    "href": "lectures/6.html#backward-selection",
+    "title": "Multivariable Linear Regression",
+    "section": "Backward Selection",
+    "text": "Backward Selection\nBegin with the full model, and remove variable until the final model is chosen."
+  },
+  {
+    "objectID": "lectures/6.html#hybrid-selection",
+    "href": "lectures/6.html#hybrid-selection",
+    "title": "Multivariable Linear Regression",
+    "section": "Hybrid Selection",
+    "text": "Hybrid Selection\nA hybrid approach between the forward and backward building approach."
+  },
+  {
+    "objectID": "lectures/6.html#about-model-selection",
+    "href": "lectures/6.html#about-model-selection",
+    "title": "Multivariable Linear Regression",
+    "section": "About Model Selection",
+    "text": "About Model Selection\nGenerally, it is not a good idea to conduct model selection. The predictor variables in your model should be guided by a literature review that illustrates important predictor variables in a model."
   }
 ]

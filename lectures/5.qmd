@@ -644,4 +644,3 @@ r2(xlm)
 xlm <- lm(body_mass_g ~ species, penguins)
 r2(xlm)
 ```
-

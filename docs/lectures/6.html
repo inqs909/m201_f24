@@ -447,21 +447,23 @@
 </details>
 
 </div>
-<img data-src="5_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
-<section id="explaining-danceability-by-album" class="slide level2">
-<h2>Explaining Danceability by Album</h2>
+<img data-src="6_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="danceability-by-mode_name" class="slide level2">
+<h2>Danceability by <code>mode_name</code></h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">ggplot</span>(taylor_album_songs, <span class="fu">aes</span>(danceability)) <span class="sc">+</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">geom_density</span>() <span class="sc">+</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> album_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>taylor_album_songs <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a></a>  <span class="fu">drop_na</span>(mode_name) <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(danceability)) <span class="sc">+</span></span>
+<span id="cb2-4"><a></a>  <span class="fu">geom_density</span>() <span class="sc">+</span></span>
+<span id="cb2-5"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> mode_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
-<img data-src="5_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="explaining-danceability-by-valence" class="slide level2">
-<h2>Explaining Danceability by Valence</h2>
+<img data-src="6_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="danceability-by-valence" class="slide level2">
+<h2>Danceability by Valence</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -471,9 +473,9 @@
 </details>
 
 </div>
-<img data-src="5_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
-<section id="explaining-danceability-by-energy" class="slide level2">
-<h2>Explaining Danceability by Energy</h2>
+<img data-src="6_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="danceability-by-energy" class="slide level2">
+<h2>Danceability by Energy</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -483,7 +485,7 @@
 </details>
 
 </div>
-<img data-src="5_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<img data-src="6_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="modelling-danceability" class="slide level2">
 <h2>Modelling Danceability</h2>
 <p>How do we use all the variables to explain danceability?</p>
@@ -523,15 +525,121 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \varepsilon
 \]</span></p>
 </div>
 </section>
-<section id="model" class="slide level2">
-<h2>Model</h2>
+<section id="model-data" class="slide level2">
+<h2>Model Data</h2>
 <p><span class="math display">\[
 Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \varepsilon
 \]</span></p>
 <p><span class="math display">\[
 \varepsilon \sim DGP
 \]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + \cdots + \beta_p X_{ip} + \varepsilon_i
+\]</span></p>
+<p><span class="math display">\[
+\varepsilon_i \sim DGP
+\]</span></p>
+</div>
+</section>
+<section id="unknown-parameters" class="slide level2">
+<h2>Unknown Parameters</h2>
+<p><span class="math display">\[
+Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + \cdots + \beta_p X_{ip} + \varepsilon_i
+\]</span></p>
+<div class="fragment">
+<p><span class="math display">\[
+\beta_0, \beta_1, \beta_2, \beta_3, \ldots, \beta_p
+\]</span></p>
+</div>
+</section>
+<section id="estimated-model" class="slide level2">
+<h2>Estimated Model</h2>
+<p><span class="math display">\[
+Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + \cdots + \beta_p X_{ip} + \varepsilon_i
+\]</span></p>
+<p><span class="math display">\[
+\hat Y_i = \hat\beta_0 + \hat\beta_1 X_{i1} + \hat\beta_2 X_{i2} + \cdots + \hat\beta_p X_{ip}
+\]</span></p>
+</section>
+<section id="estimating-prameters" class="slide level2">
+<h2>Estimating Prameters</h2>
+<p><span class="math inline">\(\beta_0, \beta_1, \beta_2, \beta_3, \ldots, \beta_p\)</span> are estimated by minimizing the following function:</p>
+<p><span class="math display">\[
+\sum^n_{i=1} (Y_i-\hat Y_i)^2
+\]</span></p>
+</section>
+<section id="fitting-a-model-in-r" class="slide level2">
+<h2>Fitting a Model in R</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">lm</span>(Y <span class="sc">~</span> X1 <span class="sc">+</span> X2 <span class="sc">+</span> ... <span class="sc">+</span> Xp, <span class="at">data =</span> DATA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="modelling-danceability-1" class="slide level2">
+<h2>Modelling Danceability</h2>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">lm</span>(danceability <span class="sc">~</span> mode_name <span class="sc">+</span> valence <span class="sc">+</span> energy, </span>
+<span id="cb6-2"><a></a>   <span class="at">data =</span> taylor_album_songs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; 
+#&gt; Call:
+#&gt; lm(formula = danceability ~ mode_name + valence + energy, data = taylor_album_songs)
+#&gt; 
+#&gt; Coefficients:
+#&gt;    (Intercept)  mode_nameminor         valence          energy  
+#&gt;        0.53753         0.07322         0.17872        -0.06349</code></pre>
+</div>
+</div>
+</section>
+<section id="estimated-model-1" class="slide level2">
+<h2>Estimated Model</h2>
+<p><span class="math display">\[
+dance = 0.54 + 0.07\times Minor + 0.18 \times valence - 0.06 \times energy
+\]</span></p>
+</section>
+<section id="hat-beta_i-representation" class="slide level2">
+<h2><span class="math inline">\(\hat \beta_i\)</span> Representation</h2>
+<p>Each regression coefficient <span class="math inline">\(\beta_i\)</span> represents how the predictor variable changes the outcome, as it increase by 1 unit.</p>
+<div class="fragment">
+<p>For categorical dummy variables, the <span class="math inline">\(\beta_i\)</span> represents how the outcome will change when the data point belongs to that value.</p>
+</div>
+</section>
+<section id="hat-beta_i-interpretation" class="slide level2">
+<h2><span class="math inline">\(\hat \beta_i\)</span> Interpretation</h2>
+<p>For <span class="math inline">\(hat \beta_i\)</span>, which is the regression coefficient (slope) of <span class="math inline">\(X_i\)</span>:</p>
+<p>As <span class="math inline">\(X_i\)</span> increases by 1 unit, the outcome (<span class="math inline">\(Y\)</span> will increase/decrease by <span class="math inline">\(\hat \beta_i\)</span> units, adjusting for all other predictor variables.</p>
+<div class="fragment">
+<p>For categorical dummy variables <span class="math inline">\(X_i\)</span>:</p>
+<p>The outcome <span class="math inline">\(Y_i\)</span> increases/decreases by <span class="math inline">\(\beta_i\)</span> units for category <span class="math inline">\(X_i\)</span> compared to the reference category. adjusting for all other predictor variables.</p>
+</div>
+</section>
+<section id="intepreting-minor-coefficient" class="slide level2">
+<h2>Intepreting Minor coefficient</h2>
+<p><span class="math display">\[
+dance = 0.54 + 0.07 Minor + 0.18 valence - 0.06 energy
+\]</span> Minor song’s average danceability score is 0.07 units higher compared to Major song’s, adjusting for valence and energy.</p>
+</section>
+<section id="intepreting-valence-coefficient" class="slide level2">
+<h2>Intepreting valence coefficient</h2>
+<p><span class="math display">\[
+dance = 0.54 + 0.07Minor + 0.18  valence - 0.06 energy
+\]</span></p>
+<p>As valence increases by 1 unit, danceability increases by an average of 0.18 units, adjusting for energy and type of song.</p>
+</section>
+<section id="intepreting-energy-coefficient" class="slide level2">
+<h2>Intepreting energy coefficient</h2>
+<p><span class="math display">\[
+dance = 0.54 + 0.07 Minor + 0.18 valence - 0.06 energy
+\]</span></p>
+<p>As energy increases by 1 unit, danceability decreases by an average of 0.06 units, adjusting for valence and type of song.</p>
 </section></section>
+<section>
 <section id="adjusted-r2" class="title-slide slide level1 agenda-slide center">
 <h1>Adjusted <span class="math inline">\(R^2\)</span></h1>
 <div class="agenda">
@@ -551,7 +659,54 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \varepsilon
 </ul>
 </div>
 </section>
-
+<section id="r2" class="slide level2">
+<h2><span class="math inline">\(R^2\)</span></h2>
+<p>Computing <span class="math inline">\(R^2\)</span> is done by determine how much the variation in the outcome is explained by model and divided by the variation of the outcome.</p>
+<p><span class="math display">\[
+R^2 = \frac{\text{variation explained by model}}{\text{variation from outcome}} \\
+= 1-\frac{\text{variation of residuals}}{\text{variation from outcome}}
+\]</span> ## <span class="math inline">\(R^2\)</span></p>
+<p>Problems arise when multiple predictors are added model. As a new predictor is added to the model, new information is added to the model which will always reduce the variation in the residuals. Therefore, the <span class="math inline">\(R^2\)</span> will always increase.</p>
+</section>
+<section id="problems-with-r2-in-mlr" class="slide level2">
+<h2>Problems with <span class="math inline">\(R^2\)</span> in MLR</h2>
+<p>When the number of variables increase, the regular <span class="math inline">\(R²\)</span> will be biased in its prediction capability when new data is obtained.</p>
+<div class="fragment">
+<p>Therefore, statisticians uses the adjusted <span class="math inline">\(R^2\)</span>, that penalizes the model when more variables are added. This ensures that a variable added will have a significant effect in predicting outcomes.</p>
+</div>
+</section>
+<section id="adjusted-r2-1" class="slide level2">
+<h2>Adjusted <span class="math inline">\(R^2\)</span></h2>
+<p><span class="math display">\[
+R_a^2 = 1-\frac{\text{variation of residuals}}{\text{variation from outcome}}\times \frac{n-1}{n-k-1}
+\]</span> - <span class="math inline">\(n\)</span>: Number of data points - <span class="math inline">\(k\)</span>: Number of predictor variables in the model</p>
+</section>
+<section id="adjusted-r2-in-r" class="slide level2">
+<h2>Adjusted <span class="math inline">\(R^2\)</span> in R</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>xlm <span class="ot">&lt;-</span> <span class="fu">lm</span>(Y <span class="sc">~</span> X1 <span class="sc">+</span> X2 <span class="sc">+</span> ... <span class="sc">+</span> Xp, <span class="at">data =</span> DATA)</span>
+<span id="cb8-2"><a></a><span class="fu">ar2</span>(xlm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>xlm <span class="ot">&lt;-</span> <span class="fu">lm</span>(danceability <span class="sc">~</span> mode_name <span class="sc">+</span> valence <span class="sc">+</span> energy, </span>
+<span id="cb9-2"><a></a>   <span class="at">data =</span> taylor_album_songs)</span>
+<span id="cb9-3"><a></a><span class="fu">ar2</span>(xlm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] 0.09275039</code></pre>
+</div>
+</div>
+<p>9% of the variation in danceability is explained by the model.</p>
+</section></section>
+<section>
 <section id="model-selection" class="title-slide slide level1 agenda-slide center">
 <h1>Model Selection</h1>
 <div class="agenda">
@@ -570,6 +725,26 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \varepsilon
 </div></li>
 </ul>
 </div>
+</section>
+<section id="model-selection-1" class="slide level2">
+<h2>Model Selection</h2>
+<p>Model Selection is the process of obtaining a “final” model containing all the necessary predictors, and eliminating any that are not necessary.</p>
+</section>
+<section id="forward-selection" class="slide level2">
+<h2>Forward Selection</h2>
+<p>Begin with the null model (<span class="math inline">\(Y\sim 1\)</span>) and add variables until a final model is chosen.</p>
+</section>
+<section id="backward-selection" class="slide level2">
+<h2>Backward Selection</h2>
+<p>Begin with the full model, and remove variable until the final model is chosen.</p>
+</section>
+<section id="hybrid-selection" class="slide level2">
+<h2>Hybrid Selection</h2>
+<p>A hybrid approach between the forward and backward building approach.</p>
+</section>
+<section id="about-model-selection" class="slide level2">
+<h2>About Model Selection</h2>
+<p>Generally, it is not a good idea to conduct model selection. The predictor variables in your model should be guided by a literature review that illustrates important predictor variables in a model.</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -590,7 +765,7 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots + \beta_p X_p + \varepsilon
 <p> </p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
