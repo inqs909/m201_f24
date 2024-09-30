@@ -41,7 +41,7 @@ library(csucistats)
 library(ThemePark)
 library(taylor)
 
-theme_set(theme_barbie() + 
+theme_set(theme_bw() + 
             theme(
               axis.text.x = element_text(size = 24),
               axis.title = element_text(size = 30),
