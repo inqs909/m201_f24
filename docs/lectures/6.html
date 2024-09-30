@@ -613,10 +613,10 @@ dance = 0.54 + 0.07\times Minor + 0.18 \times valence - 0.06 \times energy
 <section id="hat-beta_i-interpretation" class="slide level2">
 <h2><span class="math inline">\(\hat \beta_i\)</span> Interpretation</h2>
 <p>For <span class="math inline">\(hat \beta_i\)</span>, which is the regression coefficient (slope) of <span class="math inline">\(X_i\)</span>:</p>
-<p>As <span class="math inline">\(X_i\)</span> increases by 1 unit, the outcome (<span class="math inline">\(Y\)</span> will increase/decrease by <span class="math inline">\(\hat \beta_i\)</span> units, adjusting for all other predictor variables.</p>
+<p>As <span class="math inline">\(X_i\)</span> increases by 1 unit, the outcome (<span class="math inline">\(Y\)</span>) will increase/decrease by <span class="math inline">\(\hat \beta_i\)</span> units, adjusting for all other predictor variables.</p>
 <div class="fragment">
 <p>For categorical dummy variables <span class="math inline">\(X_i\)</span>:</p>
-<p>The outcome <span class="math inline">\(Y_i\)</span> increases/decreases by <span class="math inline">\(\beta_i\)</span> units for category <span class="math inline">\(X_i\)</span> compared to the reference category. adjusting for all other predictor variables.</p>
+<p>The outcome <span class="math inline">\(Y_i\)</span> increases/decreases by <span class="math inline">\(\beta_i\)</span> units for category <span class="math inline">\(X_i\)</span> compared to the reference category, adjusting for all other predictor variables.</p>
 </div>
 </section>
 <section id="intepreting-minor-coefficient" class="slide level2">
@@ -665,7 +665,10 @@ dance = 0.54 + 0.07 Minor + 0.18 valence - 0.06 energy
 <p><span class="math display">\[
 R^2 = \frac{\text{variation explained by model}}{\text{variation from outcome}} \\
 = 1-\frac{\text{variation of residuals}}{\text{variation from outcome}}
-\]</span> ## <span class="math inline">\(R^2\)</span></p>
+\]</span></p>
+</section>
+<section id="r2-1" class="slide level2">
+<h2><span class="math inline">\(R^2\)</span></h2>
 <p>Problems arise when multiple predictors are added model. As a new predictor is added to the model, new information is added to the model which will always reduce the variation in the residuals. Therefore, the <span class="math inline">\(R^2\)</span> will always increase.</p>
 </section>
 <section id="problems-with-r2-in-mlr" class="slide level2">
@@ -679,7 +682,11 @@ R^2 = \frac{\text{variation explained by model}}{\text{variation from outcome}} 
 <h2>Adjusted <span class="math inline">\(R^2\)</span></h2>
 <p><span class="math display">\[
 R_a^2 = 1-\frac{\text{variation of residuals}}{\text{variation from outcome}}\times \frac{n-1}{n-k-1}
-\]</span> - <span class="math inline">\(n\)</span>: Number of data points - <span class="math inline">\(k\)</span>: Number of predictor variables in the model</p>
+\]</span></p>
+<ul>
+<li><span class="math inline">\(n\)</span>: Number of data points</li>
+<li><span class="math inline">\(k\)</span>: Number of predictor variables in the model</li>
+</ul>
 </section>
 <section id="adjusted-r2-in-r" class="slide level2">
 <h2>Adjusted <span class="math inline">\(R^2\)</span> in R</h2>

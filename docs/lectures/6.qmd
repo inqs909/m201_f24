@@ -215,12 +215,12 @@ For categorical dummy variables, the $\beta_i$ represents how the outcome will c
 
 For $hat \beta_i$, which is the regression coefficient (slope) of $X_i$:
 
-As $X_i$ increases by 1 unit, the outcome ($Y$ will increase/decrease by $\hat \beta_i$ units, adjusting for all other predictor variables.
+As $X_i$ increases by 1 unit, the outcome ($Y$) will increase/decrease by $\hat \beta_i$ units, adjusting for all other predictor variables.
 
 ::: fragment
 For categorical dummy variables $X_i$:
 
-The outcome $Y_i$ increases/decreases by $\beta_i$ units for category $X_i$ compared to the reference category. adjusting for all other predictor variables.
+The outcome $Y_i$ increases/decreases by $\beta_i$ units for category $X_i$ compared to the reference category, adjusting for all other predictor variables.
 
 :::
 
@@ -260,6 +260,7 @@ $$
 R^2 = \frac{\text{variation explained by model}}{\text{variation from outcome}} \\
 = 1-\frac{\text{variation of residuals}}{\text{variation from outcome}}
 $$
+
 ## $R^2$
 
 Problems arise when multiple predictors are added model. As a new predictor is added to the model, new information is added to the model which will always reduce the variation in the residuals. Therefore, the $R^2$ will always increase.
@@ -277,6 +278,7 @@ Therefore, statisticians uses the adjusted $R^2$, that penalizes the model when 
 $$
 R_a^2 = 1-\frac{\text{variation of residuals}}{\text{variation from outcome}}\times \frac{n-1}{n-k-1}
 $$
+
 - $n$: Number of data points
 - $k$: Number of predictor variables in the model
 
