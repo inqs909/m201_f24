@@ -301,7 +301,7 @@ xlm <- lm(danceability ~ mode_name + valence + energy,
 ar2(xlm)
 ```
 
-9% of the variation in danceability is explained by the model.
+8.1% of the variation in danceability is explained by the model.
 
 # Model Selection
 
