@@ -4281,7 +4281,7 @@
     "href": "lectures/6.html#example",
     "title": "Multivariable Linear Regression",
     "section": "Example",
-    "text": "Example\n\n\nCode\nxlm &lt;- lm(danceability ~ mode_name + valence + energy, \n   data = taylor_album_songs)\nar2(xlm)\n\n\n#&gt; [1] 0.09275039\n\n\n9% of the variation in danceability is explained by the model."
+    "text": "Example\n\n\nCode\nxlm &lt;- lm(danceability ~ mode_name + valence + energy, \n   data = taylor_album_songs)\nar2(xlm)\n\n\n#&gt; [1] 0.08106907\n\n\n9% of the variation in danceability is explained by the model."
   },
   {
     "objectID": "lectures/6.html#model-selection-1",
