@@ -324,4 +324,3 @@ A hybrid approach between the forward and backward building approach.
 ## About Model Selection
 
 Generally, it is not a good idea to conduct model selection. The predictor variables in your model should be guided by a literature review that illustrates important predictor variables in a model.
-
