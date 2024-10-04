@@ -4113,7 +4113,7 @@
     "href": "lectures/7.html#interpretation",
     "title": "Logistic Regression",
     "section": "Interpretation",
-    "text": "Interpretation\n\\[\n\\log(odds) = -2.40 + 0.41 M + 0.004 age + 0.11 thick + 1.31ulc\n\\]\n\nThe odds of experiencing death in males is 1.5 times larger than the odds for females, adjusting for age, tumor thickness and the presence of an ulcer.\n\n\nAs age increases by 1 year, the odds of experiencing death increases by a factor of 1.004, adjusting gender, tumor thickness and presence of an ulcer."
+    "text": "Interpretation\n\\[\n\\log(odds) = -2.40 + 0.41 M + 0.004 age + 0.11 thick + 1.31ulc\n\\]\n\nThe odds of experiencing death in males is 1.5 times larger than the odds for females, adjusting for age, tumor thickness and the presence of an ulcer.\n\n\nAs age increases by 1 year, the odds of experiencing death increases by a factor of 1.004, adjusting sex, tumor thickness and presence of an ulcer."
   },
   {
     "objectID": "lectures/7.html#working-with-probabilities",
