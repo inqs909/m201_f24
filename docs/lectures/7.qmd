@@ -189,7 +189,7 @@ As X increases by 1 unit, the odds of observing the first category ($Y = 1$) inc
 
 For a categorical predictor variable (first dummy variable):
 
-The odds of observing the first category ($Y = 1$) in the idicated category ($D=1$) is .
+The odds of observing the first category ($Y = 1$) in the indicated category ($D=1$) is $e^{\hat\beta}$ times higher/lower compared to the reference category ($D=0$).
 
 
 ## Logistic Regression in R
