@@ -230,7 +230,7 @@ The odds of experiencing death in males is 1.5 times larger than the odds for fe
 :::
 
 ::: fragment
-As age increases by 1 year, the odds of experiencing death increases by a factor of 1.004, adjusting sex, tumor thickness and presence of an ulcer.
+As age increases by 1 year, the odds of experiencing death increases by a factor of 1.004, adjusting for sex, tumor thickness and presence of an ulcer.
 :::
 
 # Prediction with Models
@@ -245,6 +245,7 @@ As you can see, working with odds may be unintuitive for the average person. It 
 $$
 \hat P\left(Y = 1\right) = \frac{e^{\hat\beta_0 + \hat\beta_1X_1 + \cdots  + \hat \beta_pX_p}}{1 + e^{\hat\beta_0 + \hat\beta_1X_1 + \cdots  + \hat \beta_pX_p}}
 $$
+
 ## Prediction in R
 
 ```{r}

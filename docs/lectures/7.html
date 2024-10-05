@@ -636,7 +636,7 @@ L(\boldsymbol \beta) = \prod_{i=1}^n \left(\frac{e^{\beta_0 + \beta_1X}}{1 + e^{
 <p>The odds of experiencing death in males is 1.5 times larger than the odds for females, adjusting for age, tumor thickness and the presence of an ulcer.</p>
 </div>
 <div class="fragment">
-<p>As age increases by 1 year, the odds of experiencing death increases by a factor of 1.004, adjusting sex, tumor thickness and presence of an ulcer.</p>
+<p>As age increases by 1 year, the odds of experiencing death increases by a factor of 1.004, adjusting for sex, tumor thickness and presence of an ulcer.</p>
 </div>
 </section></section>
 <section>
@@ -667,7 +667,10 @@ L(\boldsymbol \beta) = \prod_{i=1}^n \left(\frac{e^{\beta_0 + \beta_1X}}{1 + e^{
 <h2>Predicting Probability</h2>
 <p><span class="math display">\[
 \hat P\left(Y = 1\right) = \frac{e^{\hat\beta_0 + \hat\beta_1X_1 + \cdots  + \hat \beta_pX_p}}{1 + e^{\hat\beta_0 + \hat\beta_1X_1 + \cdots  + \hat \beta_pX_p}}
-\]</span> ## Prediction in R</p>
+\]</span></p>
+</section>
+<section id="prediction-in-r" class="slide level2">
+<h2>Prediction in R</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
