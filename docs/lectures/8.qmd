@@ -70,7 +70,11 @@ Some values will be more common than others. Because of this, they have their ow
 
 $$
 Y_i = \beta_0 + \beta_1 X_i + \varepsilon_i
-$$ - $Y_i$: Outcome data - $X_i$: Predictor data - $\beta_0, \beta_1$: paramters - $\varepsilon_i$: error term
+$$ 
+- $Y_i$: Outcome data 
+- $X_i$: Predictor data 
+- $\beta_0, \beta_1$: parameters 
+- $\varepsilon_i$: error term
 
 ## Error Term
 
