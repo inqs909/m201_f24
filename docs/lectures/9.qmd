@@ -3,6 +3,7 @@ title: "The Bootstrap Method"
 format:
   revealjs:
     width: 1200
+    df-print: paged
     scrollable: true
     theme: [default, styles.scss]
     navigation-mode: vertical
@@ -99,15 +100,6 @@ T =  \hat p_{11} - \hat p_{12}
 $$
 :::
 
-## Obtain Proportions in R
-
-```{r}
-#| echo: true
-#| eval: false
-#| code-fold: show
-
-props_df(DATA, GROUP, DATAOUTCOME, VAL)
-```
 
 ## Obtain Difference in R
 
@@ -174,14 +166,14 @@ ggplot(data.frame(x = sim_stats), aes(x)) +
 
 ## Hypothesis test 
 
-::: fragment
+
 ::: incremental
--  What if $\Delta= - 0.5$?
+-  What if $\Delta = - 0.5$?
 -  What if $\Delta = 0.5$?
 -  What if $\Delta = - 0.25$?
 -  What if $\Delta = 0.25$?
 :::
-:::
+
 
 ::: fragment
 Can we determine the plausible values of $\Delta$ that may have produced our data set?
@@ -197,6 +189,22 @@ The standard error is the standard deviation of a statistic.
 ::: fragment
 It can give us a margin of error for the statistic that we compute from the data.
 :::
+
+
+## Confidence Intervals
+
+Confidence Intervals give you a collection of values that may contain the true parameter of interest. 
+
+::: fragment
+The probability of capturing the true parameter is known as the confidence. This value can take any number between 0% to 100%
+:::
+
+## Confidence Interval
+
+The confidence interval were displayed as: X%: (L, U)
+
+## Confidence Interval Intepretation
+
 
 
 ## Confidence Intervals

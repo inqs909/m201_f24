@@ -17,7 +17,7 @@
 <link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
-  <title>MATH 201 – The Bootstrap Method</title>
+  <title>MATH 201 – Mathematical Models</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -402,7 +402,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">The Bootstrap Method</h1>
+  <h1 class="title">Mathematical Models</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -417,13 +417,13 @@
 <p>Motivation</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Hypothesis Test</p>
+<p>Central Limit Theorem</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Confidence Intervals and Standard Error</p>
+<p>Normal Distribution</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Bootstrapping Techniques</p>
+<p>Variability of <span class="math inline">\(\bar X\)</span></p>
 </div></li>
 </ul>
 </div>
@@ -520,281 +520,64 @@ T =  \hat p_{11} - \hat p_{12}
 </div>
 </div>
 </section></section>
-<section>
-<section id="hypothesis-test" class="title-slide slide level1 agenda-slide center">
-<h1>Hypothesis Test</h1>
+<section id="central-limit-theorem" class="title-slide slide level1 agenda-slide center">
+<h1>Central Limit Theorem</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
 <p>Motivation</p>
 </div></li>
 <li><div class="agenda-active">
-<p>Hypothesis Test</p>
+<p>Central Limit Theorem</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Confidence Intervals and Standard Error</p>
+<p>Normal Distribution</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Bootstrapping Techniques</p>
+<p>Variability of <span class="math inline">\(\bar X\)</span></p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="hypothesis-test-1" class="slide level2">
-<h2>Hypothesis Test</h2>
-<p>Is <span class="math inline">\(T = .125\)</span> of a difference large enough to indicate that an active drug is effective against the bacteria, or seeing this can be due to random chance.</p>
-</section>
-<section id="hypotheis-test" class="slide level2">
-<h2>Hypotheis Test</h2>
-<p>We will test the following hypothesis:</p>
-<p><span class="math display">\[
-H_0:\ \Delta =  p_1-p_2 = 0
-\]</span></p>
-<p><span class="math display">\[
-H_a:\ \Delta = p_1 - p_2 \neq 0
-\]</span></p>
-</section>
-<section id="hypothesis-test-2" class="slide level2">
-<h2>Hypothesis Test</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>sim_stats <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">props</span>(bacteria<span class="sc">$</span>ap, <span class="fu">shuffle</span>(bacteria<span class="sc">$</span>y), <span class="st">"y"</span>, T))</span>
-<span id="cb7-2"><a></a>test_stat <span class="ot">&lt;-</span> <span class="fu">props</span>(bacteria<span class="sc">$</span>ap, bacteria<span class="sc">$</span>y, <span class="st">"y"</span>, T)</span>
-<span id="cb7-3"><a></a><span class="fu">sum</span>(<span class="fu">abs</span>(sim_stats) <span class="sc">&gt;</span> <span class="fu">abs</span>(test_stat)) <span class="sc">/</span> <span class="dv">1001</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.01498501</code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x =</span> sim_stats), <span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
-<span id="cb9-2"><a></a>  <span class="fu">geom_density</span>() <span class="sc">+</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> test_stat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 
-</div>
-<img data-src="10_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
-<section id="hypothesis-test-3" class="slide level2">
-<h2>Hypothesis test</h2>
-<div class="fragment">
-<div>
-<ul>
-<li class="fragment">What if <span class="math inline">\(\Delta= - 0.5\)</span>?</li>
-<li class="fragment">What if <span class="math inline">\(\Delta = 0.5\)</span>?</li>
-<li class="fragment">What if <span class="math inline">\(\Delta = - 0.25\)</span>?</li>
-<li class="fragment">What if <span class="math inline">\(\Delta = 0.25\)</span>?</li>
-</ul>
-</div>
-</div>
-<div class="fragment">
-<p>Can we determine the plausible values of <span class="math inline">\(\Delta\)</span> that may have produced our data set?</p>
-</div>
-</section></section>
-<section>
-<section id="confidence-intervals-and-standard-error" class="title-slide slide level1 agenda-slide center">
-<h1>Confidence Intervals and Standard Error</h1>
+<section id="normal-distribution" class="title-slide slide level1 agenda-slide center">
+<h1>Normal Distribution</h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
 <p>Motivation</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Hypothesis Test</p>
+<p>Central Limit Theorem</p>
 </div></li>
 <li><div class="agenda-active">
-<p>Confidence Intervals and Standard Error</p>
+<p>Normal Distribution</p>
 </div></li>
 <li><div class="agenda-inactive agenda-post-active">
-<p>Bootstrapping Techniques</p>
+<p>Variability of <span class="math inline">\(\bar X\)</span></p>
 </div></li>
 </ul>
 </div>
 </section>
-<section id="standard-error" class="slide level2">
-<h2>Standard Error</h2>
-<p>The standard error is the standard deviation of a statistic.</p>
-<div class="fragment">
-<p>It can give us a margin of error for the statistic that we compute from the data.</p>
-</div>
-</section>
-<section id="confidence-intervals" class="slide level2">
-<h2>Confidence Intervals</h2>
-<p>These are a collection of <span class="math inline">\(\Delta\)</span> values that will fail to reject the Null Hypothesis.</p>
-<div class="fragment">
-<p>The <span class="math inline">\(\Delta\)</span> values that are not different from our current estimate <span class="math inline">\(T\)</span></p>
-</div>
-</section>
-<section id="confidence-intervals-1" class="slide level2">
-<h2>Confidence Intervals</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="fl">0.15</span>, <span class="fl">0.05</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb10-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
-<span id="cb10-3"><a></a>  <span class="fu">geom_density</span>() <span class="sc">+</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> test_stat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 
-</div>
-<img data-src="10_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="confidence-intervals-2" class="slide level2">
-<h2>Confidence Intervals</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="fl">0.075</span>, <span class="fl">0.05</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb11-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
-<span id="cb11-3"><a></a>  <span class="fu">geom_density</span>() <span class="sc">+</span></span>
-<span id="cb11-4"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> test_stat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-
-</div>
-<img data-src="10_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
-<section id="how-to-construct-the-dgp-centered-around-delta" class="slide level2">
-<h2>How to construct the DGP centered around <span class="math inline">\(\Delta\)</span>?</h2>
-<div class="fragment">
-<p>Bootstrapping Techniques</p>
-</div>
-<div class="fragment">
-<p>Mathematical Models</p>
-</div>
-</section></section>
-<section>
-<section id="bootstrapping-techniques" class="title-slide slide level1 agenda-slide center">
-<h1>Bootstrapping Techniques</h1>
+<section id="variability-of-bar-x" class="title-slide slide level1 agenda-slide center">
+<h1>Variability of <span class="math inline">\(\bar X\)</span></h1>
 <div class="agenda">
 <ul>
 <li><div class="agenda-inactive agenda-pre-active">
 <p>Motivation</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Hypothesis Test</p>
+<p>Central Limit Theorem</p>
 </div></li>
 <li><div class="agenda-inactive agenda-pre-active">
-<p>Confidence Intervals and Standard Error</p>
+<p>Normal Distribution</p>
 </div></li>
 <li><div class="agenda-active">
-<p>Bootstrapping Techniques</p>
+<p>Variability of <span class="math inline">\(\bar X\)</span></p>
 </div></li>
 </ul>
 </div>
-</section>
-<section id="bootstrapping-techniques-1" class="slide level2">
-<h2>Bootstrapping Techniques</h2>
-<p>Bootstrapping is a technique to determine which <span class="math inline">\(\Delta = p_1-p_2\)</span> values, or any other statistic, will <strong>not</strong> be significantly different than <span class="math inline">\(T\)</span>.</p>
-<div class="fragment">
-<p>Bootstrapping will simulate several fake data sets from the DGP of the data. Afterwards, each data set will produce a statistic to construct the sampling distribution.</p>
-</div>
-</section>
-<section id="bootstrap-theory" class="slide level2">
-<h2>Bootstrap Theory</h2>
-<div class="fragment">
-<p>The data set was generated from a distribution called <span class="math inline">\(f\)</span>.</p>
-</div>
-<div class="fragment">
-<p><span class="math inline">\(f\)</span> is unknown, we will sample from <span class="math inline">\(\hat f\)</span> generated from the data.</p>
-</div>
-<div class="fragment">
-<p>When <span class="math inline">\(n \rightarrow \infty\)</span>, then <span class="math inline">\(\hat f\rightarrow f\)</span></p>
-</div>
-<div class="fragment">
-<p>So long as <span class="math inline">\(n\)</span> is sufficiently large, the DGP of a statistic will be generated.</p>
-</div>
-</section>
-<section id="bootstrapping-algorithm" class="slide level2 scrollable">
-<h2>Bootstrapping Algorithm</h2>
-<ol type="1">
-<li>Resample the data set using the <code>resample()</code> function</li>
-<li>Compute the statistic of interest</li>
-<li>Store the statistic</li>
-<li>Repeat steps 1-3, until you a high number of simulations</li>
-<li>Compute the confidence interval or standard errors from the bootstrap estimates</li>
-</ol>
-</section>
-<section id="bootstrapping-in-r" class="slide level2">
-<h2>Bootstrapping in R</h2>
-<p>The <code>resample()</code> will create a new data set by sampling the old data set with replacement.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>boot1 <span class="ot">&lt;-</span> <span class="fu">resample</span>(bacteria)</span>
-<span id="cb12-2"><a></a><span class="fu">props_df</span>(boot1, ap, y, <span class="at">yval =</span> <span class="st">"y"</span>, <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.1334918</code></pre>
-</div>
-</div>
-</section>
-<section id="repeat-process" class="slide level2">
-<h2>Repeat Process</h2>
-<p>Use the <code>replicate()</code> function to repeat this process a high number of times.</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>boot_samples <span class="ot">&lt;-</span><span class="fu">replicate</span>(<span class="dv">1000</span>, </span>
-<span id="cb14-2"><a></a>                         <span class="fu">props_df</span>(<span class="fu">resample</span>(bacteria), ap, y, <span class="at">yval =</span> <span class="st">"y"</span>, <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-</section>
-<section id="bootstrap-distribution" class="slide level2">
-<h2>Bootstrap Distribution</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x =</span> boot_samples), <span class="fu">aes</span>(x)) <span class="sc">+</span></span>
-<span id="cb15-2"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span> </span>
-<span id="cb15-3"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> test_stat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-
-</div>
-<img data-src="10_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
-<section id="bootstrap-based-standard-error" class="slide level2">
-<h2>Bootstrap-Based Standard Error</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">sd</span>(boot_samples)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt; [1] 0.05291626</code></pre>
-</div>
-</div>
-</section>
-<section id="interpreting-the-se" class="slide level2">
-<h2>Interpreting the SE</h2>
-<p><span class="math display">\[
-0.125 \pm 0.05
-\]</span></p>
-</section>
-<section id="confidence-interval" class="slide level2">
-<h2>95% Confidence Interval</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(<span class="at">x =</span> boot_samples), <span class="fu">aes</span>(x)) <span class="sc">+</span></span>
-<span id="cb18-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">fill =</span> <span class="fu">middle</span>(x, .<span class="dv">95</span>))) <span class="sc">+</span> </span>
-<span id="cb18-3"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> test_stat) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-
-</div>
-<img data-src="10_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
-<section id="confidence-interval-1" class="slide level2">
-<h2>95% Confidence Interval</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">quantile</span>(boot_samples, <span class="at">probs =</span> <span class="fu">c</span>(<span class="fl">0.025</span>, <span class="fl">0.975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>#&gt;       2.5%      97.5% 
-#&gt; 0.02109233 0.23187650</code></pre>
-</div>
-</div>
-</section>
-<section id="interpretation" class="slide level2">
-<h2>Interpretation</h2>
-<p>We are 95% confident that the true difference in proportion (<span class="math inline">\(\Delta\)</span>) is captured between the ranges (0.025, 0.224).</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -815,7 +598,7 @@ H_a:\ \Delta = p_1 - p_2 \neq 0
 <p> </p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
