@@ -681,7 +681,7 @@ $$
 #| code-fold: show
 #| eval: false
 
-sum(abs(SIM_VECTOR) > abs(TEST_STAT)) / N + 1
+(sum(abs(SIM_VECTOR) > abs(TEST_STAT)) + 1) / (N + 1)
 ```
 
 
