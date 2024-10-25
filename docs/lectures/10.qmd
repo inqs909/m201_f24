@@ -138,9 +138,183 @@ props_df(bacteria, ap, y, "y")
 props_df(bacteria, ap, y, "y", TRUE)
 ```
 
+## Hypotheis Test
 
-# Central Limit Theorem
+We will test the following hypothesis:
+
+$$
+H_0:\ \Delta =  p_1-p_2 = 0
+$$
+
+$$
+H_a:\ \Delta = p_1 - p_2 \neq 0
+$$
 
 # Normal Distribution
 
-# Variability of $\bar X$
+## Normal Distribution
+
+The **Normal Distribution** is a probability distribution that is symmetric, with most of the data points clustering around the mean. 
+
+- It’s **bell-shaped** and is defined mathematically by two parameters:
+  - **Mean (\(\mu\))**: The center or peak of the distribution.
+  - **Standard Deviation (\(\sigma\))**: Controls the spread of the distribution.
+
+
+## Normal Distribution
+
+```{r}
+x <- seq(-4, 4, length.out = 1000)
+data.frame(x = x, y = dnorm(x)) |> 
+  ggplot(aes(x, y)) +
+  geom_line()
+```
+
+
+
+## Properties of the Normal Distribution
+
+::: incremental
+
+1. **Symmetry**: It is perfectly symmetric about the mean, meaning the left side is a mirror image of the right.
+2. **Unimodal**: There is a single peak at the mean.
+3. **Mean, Median, and Mode are Equal**: In a normal distribution, these three measures of central tendency are located at the same point.
+4. **68-95-99.7 Rule** (Empirical Rule)
+ 
+:::
+
+## Standard Normal Distribution
+The **Standard Normal Distribution** is a special type of normal distribution with a mean of 0 and a standard deviation of 1. It's often used as a reference to convert any normal distribution to a standard form.
+
+## Z-Scores
+A **Z-score** (or standard score) tells us how many standard deviations an individual data point is from the mean. It’s calculated as: $Z = \frac{X - \mu}{\sigma}$
+
+- If $Z$ is positive, the data point is above the mean.
+- If $Z$ is negative, the data point is below the mean.
+- Using Z-scores, we can compare values across different normal distributions or find the probability associated with a particular score.
+
+
+
+## Empirical Rule
+
+The **Empirical Rule** provides a way to understand the spread of data in a normal distribution by describing how data points cluster around the mean. According to this rule:
+
+1. Approximately **68%** of data points fall within **one standard deviation** of the mean.
+2. Approximately **95%** of data points fall within **two standard deviations** of the mean.
+3. Approximately **99.7%** of data points fall within **three standard deviations** of the mean.
+
+
+
+## Empirical Rule and Normal Distribution
+
+In a normal distribution:
+
+- **68% of data** lies between $(\mu - \sigma)\) and \((\mu + \sigma)$.
+
+- **95% of data** lies between $(\mu - 2\sigma)\) and \((\mu + 2\sigma)$.
+
+- **99.7% of data** lies between $(\mu - 3\sigma)\) and \((\mu + 3\sigma)$.
+
+These intervals allow us to estimate probabilities for data within each range without needing to calculate exact probabilities.
+
+
+## Visualizing the Empirical Rule
+
+1. The **68% region** represents the middle of the curve, starting one standard deviation left of the mean and ending one standard deviation right.
+2. The **95% region** stretches further out, covering almost the entire curve except for the outer tails.
+3. The **99.7% region** includes nearly all data points, covering the entire curve except for a tiny fraction at each extreme.
+
+## Empirical Rule
+
+![](img/fig-er6895997-1.png)
+
+# Central Limit Theorem
+
+## Central Limit Theorem
+What does the Central Limit Theorem (CLT) actually tell us?
+
+::: fragment
+
+The CLT states that:
+
+::: incremental
+
+1. **If you take a sufficiently large number of samples from any population, the distribution of the sample means will be approximately normal.**
+2. This approximation holds **no matter the shape of the original population distribution** (it could be normal, skewed, bimodal, etc.).
+3. The mean of this sampling distribution will be equal to the **population mean**.
+4. The standard deviation of this sampling distribution (often called the **standard error**) will be the population standard deviation divided by the square root of the sample size, \( \sigma_{\text{sample mean}} = \frac{\sigma}{\sqrt{n}} \).
+
+:::
+
+:::
+
+
+## Why the Central Limit Theorem is Important
+
+
+The CLT is powerful for several reasons:
+
+::: incremental
+
+1. **Predicting Sample Outcomes:** Since we know the distribution of sample means will be approximately normal, we can make predictions about future samples.
+2. **Confidence Intervals and Hypothesis Testing:** The normal distribution of sample means allows us to estimate population parameters (like the mean) with confidence and test hypotheses even if the population itself isn’t normally distributed.
+3. **Practical Applications in Various Fields:** From quality control in manufacturing to political polling and medicine, the CLT lets us make inferences about population characteristics based on sample data.
+
+:::
+
+# Inference
+
+## Using Mathematical Models
+
+The inferential procedures, such as computing the p-value or confidence interval, can be constructed with mathematical models.
+
+## Advantages
+
+::: incremental
+
+-   Mathematical Models have been widely studied and implemented in several software packages.
+-   These are not computationally intensive
+-   Can work with smaller data set and provide more reliable results
+
+:::
+
+## Disadvantages
+
+::: incremental
+-   If the mathematical model is wrong, results may be invalid.
+-   Difficult to know what are the true mathematical models.
+:::
+
+# Inference in R
+
+## Inference in R
+
+$$
+H_0:\ \Delta =  p_1-p_2 = 0
+$$
+
+$$
+H_a:\ \Delta = p_1 - p_2 \neq 0
+$$
+
+## Proportions Test
+
+```{r}
+#| eval: false
+#| code-fold: show
+prop.test(x = c(CAT_1, CAT_2), n = c(N_1, N_2))
+```
+
+
+## Descriptives
+
+```{r}
+cat_stats(bacteria$ap, bacteria$y)
+```
+
+## Proportions Test in R
+
+```{r}
+prop.test(x = c(93, 84), n = c(124, 96))
+```
+
