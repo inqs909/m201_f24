@@ -157,8 +157,8 @@ $$
 The **Normal Distribution** is a probability distribution that is symmetric, with most of the data points clustering around the mean. 
 
 - It’s **bell-shaped** and is defined mathematically by two parameters:
-  - **Mean (\(\mu\))**: The center or peak of the distribution.
-  - **Standard Deviation (\(\sigma\))**: Controls the spread of the distribution.
+  - **Mean ($\mu$)**: The center or peak of the distribution.
+  - **Standard Deviation ($\sigma$)**: Controls the spread of the distribution.
 
 
 ## Normal Distribution

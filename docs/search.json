@@ -5198,7 +5198,7 @@
     "href": "lectures/10.html#normal-distribution-1",
     "title": "Mathematical Models",
     "section": "Normal Distribution",
-    "text": "Normal Distribution\nThe Normal Distribution is a probability distribution that is symmetric, with most of the data points clustering around the mean.\n\nIt’s bell-shaped and is defined mathematically by two parameters:\n\nMean (()): The center or peak of the distribution.\nStandard Deviation (()): Controls the spread of the distribution."
+    "text": "Normal Distribution\nThe Normal Distribution is a probability distribution that is symmetric, with most of the data points clustering around the mean.\n\nIt’s bell-shaped and is defined mathematically by two parameters:\n\nMean (\\(\\mu\\)): The center or peak of the distribution.\nStandard Deviation (\\(\\sigma\\)): Controls the spread of the distribution."
   },
   {
     "objectID": "lectures/10.html#normal-distribution-2",
