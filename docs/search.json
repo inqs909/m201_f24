@@ -5163,7 +5163,7 @@
     "href": "lectures/10.html#obtain-proportions-in-r",
     "title": "Mathematical Models",
     "section": "Obtain Proportions in R",
-    "text": "Obtain Proportions in R\n\n\nCode\nprops_df(DATA, GROUP, DATAOUTCOME, VAL)"
+    "text": "Obtain Proportions in R\n\n\nCode\nprops_df(DATA, GROUP, OUTCOME, VAL)"
   },
   {
     "objectID": "lectures/10.html#obtain-difference-in-r",

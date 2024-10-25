@@ -106,7 +106,7 @@ $$
 #| eval: false
 #| code-fold: show
 
-props_df(DATA, GROUP, DATAOUTCOME, VAL)
+props_df(DATA, GROUP, OUTCOME, VAL)
 ```
 
 ## Obtain Difference in R
