@@ -65,7 +65,7 @@ Model the relationship between the outcome `premie` and `habit` ("smoker" and  "
 
 ## Motivation 2
 
-Model the relationship between the outcome `premie` and `weeks` ("smoker" and  "nonsmoker").
+Model the relationship between the outcome `premie` and `visits` ("smoker" and  "nonsmoker").
 
 
 
@@ -101,6 +101,8 @@ The odds of a mother who smokes having a premature infant is 0.98 times lower th
 
 
 ## Logistic Model 2
+
+Use a logistic regression to model the outcome `premie` and `visits`.
 
 ```{r}
 #| code-fold: true

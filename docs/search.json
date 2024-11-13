@@ -1516,7 +1516,7 @@
     "href": "lectures/11.html#motivation-2",
     "title": "Hypothesis Testing",
     "section": "Motivation 2",
-    "text": "Motivation 2\nModel the relationship between the outcome premie and weeks (“smoker” and “nonsmoker”)."
+    "text": "Motivation 2\nModel the relationship between the outcome premie and visits (“smoker” and “nonsmoker”)."
   },
   {
     "objectID": "lectures/11.html#logistic-model-1",
@@ -1544,7 +1544,7 @@
     "href": "lectures/11.html#logistic-model-2",
     "title": "Hypothesis Testing",
     "section": "Logistic Model 2",
-    "text": "Logistic Model 2\n\n\nCode\nglm(premie ~ visits, data = ncbirths, family = binomial())"
+    "text": "Logistic Model 2\nUse a logistic regression to model the outcome premie and visits.\n\n\nCode\nglm(premie ~ visits, data = ncbirths, family = binomial())"
   },
   {
     "objectID": "lectures/11.html#odds-ratio-2",
