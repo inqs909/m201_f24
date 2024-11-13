@@ -1498,174 +1498,6 @@
     "text": "EPE Session\n\n\n#&gt; [1] \"Data:\"\n\n\n#&gt; [1] 10 11 20 10 11\n\n\n#&gt; [1] \"Mean:\"\n\n\n#&gt; [1] 12.4\n\n\n#&gt; [1] \"Variance:\"\n\n\n#&gt; [1] 18.3\n\n\nCompute the z-score:\n\\[\nZ=\\frac{X-\\bar X}{s}\n\\]\nIn words, what does the z-score represent?"
   },
   {
-    "objectID": "lectures/4b.html#histogram",
-    "href": "lectures/4b.html#histogram",
-    "title": "Data Visualization",
-    "section": "Histogram",
-    "text": "Histogram\nA histogram is a graphical representation of the distribution or frequency of data points in a dataset. It provides a visual way to understand the shape, central tendency, and spread of a dataset by dividing the data into intervals or bins and showing how many data points fall into each bin."
-  },
-  {
-    "objectID": "lectures/4b.html#histogram-r-code",
-    "href": "lectures/4b.html#histogram-r-code",
-    "title": "Data Visualization",
-    "section": "Histogram R Code",
-    "text": "Histogram R Code\n\ngf_histogram(~bill_length_mm, data = penguins)"
-  },
-  {
-    "objectID": "lectures/4b.html#histogram-1",
-    "href": "lectures/4b.html#histogram-1",
-    "title": "Data Visualization",
-    "section": "Histogram",
-    "text": "Histogram"
-  },
-  {
-    "objectID": "lectures/4b.html#box-plot",
-    "href": "lectures/4b.html#box-plot",
-    "title": "Data Visualization",
-    "section": "Box Plot",
-    "text": "Box Plot\nA box plot, also known as a box-and-whisker plot, is a graphical representation of the distribution and key statistical characteristics of a dataset. It provides a visual summary of the data’s central tendency, spread, and potential outliers."
-  },
-  {
-    "objectID": "lectures/4b.html#box-plot-1",
-    "href": "lectures/4b.html#box-plot-1",
-    "title": "Data Visualization",
-    "section": "Box Plot",
-    "text": "Box Plot"
-  },
-  {
-    "objectID": "lectures/4b.html#box-plot-r-code",
-    "href": "lectures/4b.html#box-plot-r-code",
-    "title": "Data Visualization",
-    "section": "Box Plot R Code",
-    "text": "Box Plot R Code\n\ngf_boxplot(~bill_length_mm, data = penguins)"
-  },
-  {
-    "objectID": "lectures/4b.html#box-plot-2",
-    "href": "lectures/4b.html#box-plot-2",
-    "title": "Data Visualization",
-    "section": "Box Plot",
-    "text": "Box Plot"
-  },
-  {
-    "objectID": "lectures/4b.html#categorical-variables",
-    "href": "lectures/4b.html#categorical-variables",
-    "title": "Data Visualization",
-    "section": "Categorical Variables",
-    "text": "Categorical Variables\n\n\n#&gt; $species\n#&gt;  [1] Adelie    Gentoo    Chinstrap Chinstrap Gentoo    Gentoo    Gentoo   \n#&gt;  [8] Adelie    Adelie    Gentoo    Gentoo    Gentoo    Chinstrap Gentoo   \n#&gt; [15] Chinstrap Chinstrap Gentoo    Chinstrap Adelie    Adelie   \n#&gt; Levels: Adelie Chinstrap Gentoo"
-  },
-  {
-    "objectID": "lectures/4b.html#frequency-tables",
-    "href": "lectures/4b.html#frequency-tables",
-    "title": "Data Visualization",
-    "section": "Frequency Tables",
-    "text": "Frequency Tables\nA frequency table is a statistical tool used to organize and summarize a set of data by counting the number of times each unique value or category appears within the dataset. It provides a simple and clear way to represent the distribution of data, particularly for categorical or discrete variables."
-  },
-  {
-    "objectID": "lectures/4b.html#relative-frequency",
-    "href": "lectures/4b.html#relative-frequency",
-    "title": "Data Visualization",
-    "section": "Relative Frequency",
-    "text": "Relative Frequency\nRelative frequency is a statistical concept used to describe the proportion or percentage of times a particular event or outcome occurs relative to the total number of observations or occurrences in a dataset or sample."
-  },
-  {
-    "objectID": "lectures/4b.html#proportional-tables",
-    "href": "lectures/4b.html#proportional-tables",
-    "title": "Data Visualization",
-    "section": "Proportional Tables",
-    "text": "Proportional Tables\nA proportion table is a type of statistical table used to display the relative frequencies or proportions of different categories within a dataset. It provides a way to represent the distribution of data in terms of percentages or proportions, making it easier to compare and understand the relative sizes of different categories."
-  },
-  {
-    "objectID": "lectures/4b.html#pie-charts",
-    "href": "lectures/4b.html#pie-charts",
-    "title": "Data Visualization",
-    "section": "Pie Charts",
-    "text": "Pie Charts\nA pie chart is a circular graphical representation used to display data in a way that illustrates the relative proportions or percentages of different categories or components within a whole. Pie charts are particularly useful for showing the composition of a dataset when you want to emphasize the parts of a whole and how they relate to each other."
-  },
-  {
-    "objectID": "lectures/4b.html#pie-charts-r-code",
-    "href": "lectures/4b.html#pie-charts-r-code",
-    "title": "Data Visualization",
-    "section": "Pie Charts R Code",
-    "text": "Pie Charts R Code\n\npenguins |&gt; ggplot(aes(x=\"\", fill = species)) + \n  geom_bar() + \n  coord_polar(\"y\")"
-  },
-  {
-    "objectID": "lectures/4b.html#pie-charts-in-r",
-    "href": "lectures/4b.html#pie-charts-in-r",
-    "title": "Data Visualization",
-    "section": "Pie Charts in R",
-    "text": "Pie Charts in R"
-  },
-  {
-    "objectID": "lectures/4b.html#bar-charts",
-    "href": "lectures/4b.html#bar-charts",
-    "title": "Data Visualization",
-    "section": "Bar Charts",
-    "text": "Bar Charts\nA bar chart, also known as a bar graph, is a graphical representation used to display categorical data in a way that visually represents the values or frequencies of different categories by using rectangular bars. Bar charts are particularly effective for comparing and showing the relationships between distinct categories or groups."
-  },
-  {
-    "objectID": "lectures/4b.html#bar-charts-r-code",
-    "href": "lectures/4b.html#bar-charts-r-code",
-    "title": "Data Visualization",
-    "section": "Bar Charts R Code",
-    "text": "Bar Charts R Code\n\ngf_bar(~species, data = penguins)"
-  },
-  {
-    "objectID": "lectures/4b.html#bar-charts-r-code-1",
-    "href": "lectures/4b.html#bar-charts-r-code-1",
-    "title": "Data Visualization",
-    "section": "Bar Charts R Code",
-    "text": "Bar Charts R Code"
-  },
-  {
-    "objectID": "lectures/4b.html#explaining-variation-1",
-    "href": "lectures/4b.html#explaining-variation-1",
-    "title": "Data Visualization",
-    "section": "Explaining Variation",
-    "text": "Explaining Variation\n\nThis is the process where we try to reduce the variation with the use of other variables.\n\n\nCan be thought of as getting it less wrong when taking an educated guess."
-  },
-  {
-    "objectID": "lectures/4b.html#explaining-variation-2",
-    "href": "lectures/4b.html#explaining-variation-2",
-    "title": "Data Visualization",
-    "section": "Explaining Variation",
-    "text": "Explaining Variation"
-  },
-  {
-    "objectID": "lectures/4b.html#explaining-variation-with-one-variable",
-    "href": "lectures/4b.html#explaining-variation-with-one-variable",
-    "title": "Data Visualization",
-    "section": "Explaining Variation with One Variable",
-    "text": "Explaining Variation with One Variable"
-  },
-  {
-    "objectID": "lectures/4b.html#explaining-variation-with-one-variable-1",
-    "href": "lectures/4b.html#explaining-variation-with-one-variable-1",
-    "title": "Data Visualization",
-    "section": "Explaining Variation with One Variable",
-    "text": "Explaining Variation with One Variable"
-  },
-  {
-    "objectID": "lectures/4b.html#outcome-variables",
-    "href": "lectures/4b.html#outcome-variables",
-    "title": "Data Visualization",
-    "section": "Outcome Variables",
-    "text": "Outcome Variables\nThese are variables we want to study.\n\nAlso known as outcome of interest.\n\n\nAlso known as dependent variable."
-  },
-  {
-    "objectID": "lectures/4b.html#explanatory-variables",
-    "href": "lectures/4b.html#explanatory-variables",
-    "title": "Data Visualization",
-    "section": "Explanatory Variables",
-    "text": "Explanatory Variables\nThese are variable that explain the outcome of interest.\n\nAlso known as predictor variable.\n\n\nAlso known as independent variable."
-  },
-  {
-    "objectID": "lectures/4b.html#study-habits",
-    "href": "lectures/4b.html#study-habits",
-    "title": "Data Visualization",
-    "section": "Study Habits",
-    "text": "Study Habits\n\nThe first exam will be on September 25.\n\n\nWhat are some study strategies that you can implement in this course?"
-  },
-  {
     "objectID": "lectures/11.html#motivation-1",
     "href": "lectures/11.html#motivation-1",
     "title": "Hypothesis Testing",
@@ -1673,11 +1505,11 @@
     "text": "Motivation\nThe ncbirths data set provides information on whether different predictors. The outcome of interest will be premie (“full term” or “premie”)."
   },
   {
-    "objectID": "lectures/11.html#model-1",
-    "href": "lectures/11.html#model-1",
+    "objectID": "lectures/11.html#motivation-1-1",
+    "href": "lectures/11.html#motivation-1-1",
     "title": "Hypothesis Testing",
-    "section": "Model 1",
-    "text": "Model 1\nModel the relationship between the outcome premie and habit (“smoker” and “nonsmoker”)."
+    "section": "Motivation 1",
+    "text": "Motivation 1\nModel the relationship between the outcome premie and habit (“smoker” and “nonsmoker”)."
   },
   {
     "objectID": "lectures/11.html#motivation-2",
@@ -1804,6 +1636,216 @@
     "title": "Hypothesis Testing",
     "section": "Hypothesis Test Process",
     "text": "Hypothesis Test Process\n\n\nSet up the Null and Alternative Hypothesis.\n\n\\(H_0: \\beta = 0\\) and \\(H_a: \\beta \\ne 0\\)\n\nCompute p-value or confidence interval\nMake a decision\nInterpret the results"
+  },
+  {
+    "objectID": "lectures/11.html#example",
+    "href": "lectures/11.html#example",
+    "title": "Hypothesis Testing",
+    "section": "Example",
+    "text": "Example\nUse a logistic regression to model the outcome premie and habit.\n\n\nCode\nglm(premie ~ habit, data = ncbirths, family = binomial())\nb(glm(premie ~ habit, data = ncbirths, family = binomial()), 1)\nexp(b(glm(premie ~ habit, data = ncbirths, family = binomial()), 1))"
+  },
+  {
+    "objectID": "lectures/11.html#example-3",
+    "href": "lectures/11.html#example-3",
+    "title": "Hypothesis Testing",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "lectures/11.html#logistic-model-2-1",
+    "href": "lectures/11.html#logistic-model-2-1",
+    "title": "Hypothesis Testing",
+    "section": "Logistic Model 2",
+    "text": "Logistic Model 2\n\n\nCode\nglm(premie ~ visits, data = ncbirths, family = binomial())\n\nb(glm(premie ~ visits, data = ncbirths, family = binomial()), 1)\nexp(b(glm(premie ~ visits, data = ncbirths, family = binomial()), 1))"
+  },
+  {
+    "objectID": "lectures/10.html#motivation-1",
+    "href": "lectures/10.html#motivation-1",
+    "title": "Mathematical Models",
+    "section": "Motivation",
+    "text": "Motivation\nThe bacteria data set contians information on whether bacteria (y: y or n) is present after utilizing treatments (ap: active or placebo).\n\nWe are interesting in determine the proportion of having bacteria present is different for those taking an “active” or “placebo”."
+  },
+  {
+    "objectID": "lectures/10.html#comparing-proportions",
+    "href": "lectures/10.html#comparing-proportions",
+    "title": "Mathematical Models",
+    "section": "Comparing Proportions",
+    "text": "Comparing Proportions\nWe are interesting in determining if different groups see different proportions of a binary outcome.\nWe compute the proportions of observing the binary outcome in Group 1 and Group 2 and see if they are fundamentally different from each other."
+  },
+  {
+    "objectID": "lectures/10.html#by-2-cross-tabulations",
+    "href": "lectures/10.html#by-2-cross-tabulations",
+    "title": "Mathematical Models",
+    "section": "2 by 2 Cross Tabulations",
+    "text": "2 by 2 Cross Tabulations\n\n\n\nGroups\nOutcome 1\nOutcome 2\n\n\nGroup 1\n\\(p_{11}\\)\n\\(p_{21}\\)\n\n\nGroup 2\n\\(p_{12}\\)\n\\(p_{22}\\)\n\n\n\n\nWe want to compare \\(p_{11}\\) and \\(p_{12}\\), to determine if the probability of outcome 1 are the same for both groups."
+  },
+  {
+    "objectID": "lectures/10.html#test-statistic",
+    "href": "lectures/10.html#test-statistic",
+    "title": "Mathematical Models",
+    "section": "Test Statistic",
+    "text": "Test Statistic\nWe can use both \\(p_{11}\\) and \\(p_{12}\\) to determine if there is a fundamental difference.\n\nHowever, it will be more beneficial to utilize one statistic to contruct the sampling distribution.\n\n\n\\[\nT =  \\hat p_{11} - \\hat p_{12}\n\\]"
+  },
+  {
+    "objectID": "lectures/10.html#obtain-proportions-in-r",
+    "href": "lectures/10.html#obtain-proportions-in-r",
+    "title": "Mathematical Models",
+    "section": "Obtain Proportions in R",
+    "text": "Obtain Proportions in R\n\n\nCode\nprops_df(DATA, GROUP, OUTCOME, VAL)"
+  },
+  {
+    "objectID": "lectures/10.html#obtain-difference-in-r",
+    "href": "lectures/10.html#obtain-difference-in-r",
+    "title": "Mathematical Models",
+    "section": "Obtain Difference in R",
+    "text": "Obtain Difference in R\n\n\nCode\nprops_df(DATA, GROUP, OUTCOME, VAL, diff = TRUE)"
+  },
+  {
+    "objectID": "lectures/10.html#bacteria-example",
+    "href": "lectures/10.html#bacteria-example",
+    "title": "Mathematical Models",
+    "section": "Bacteria Example",
+    "text": "Bacteria Example\n\n\nCode\nprops_df(bacteria, ap, y, \"y\")\n\n\n#&gt;    p1    p2 \n#&gt; 0.750 0.875"
+  },
+  {
+    "objectID": "lectures/10.html#bacteria-example-1",
+    "href": "lectures/10.html#bacteria-example-1",
+    "title": "Mathematical Models",
+    "section": "Bacteria Example",
+    "text": "Bacteria Example\n\n\nCode\nprops_df(bacteria, ap, y, \"y\", TRUE)\n\n\n#&gt; [1] 0.125"
+  },
+  {
+    "objectID": "lectures/10.html#hypotheis-test",
+    "href": "lectures/10.html#hypotheis-test",
+    "title": "Mathematical Models",
+    "section": "Hypotheis Test",
+    "text": "Hypotheis Test\nWe will test the following hypothesis:\n\\[\nH_0:\\ \\Delta =  p_1-p_2 = 0\n\\]\n\\[\nH_a:\\ \\Delta = p_1 - p_2 \\neq 0\n\\]"
+  },
+  {
+    "objectID": "lectures/10.html#normal-distribution-1",
+    "href": "lectures/10.html#normal-distribution-1",
+    "title": "Mathematical Models",
+    "section": "Normal Distribution",
+    "text": "Normal Distribution\nThe Normal Distribution is a probability distribution that is symmetric, with most of the data points clustering around the mean.\n\nIt’s bell-shaped and is defined mathematically by two parameters:\n\nMean (\\(\\mu\\)): The center or peak of the distribution.\nStandard Deviation (\\(\\sigma\\)): Controls the spread of the distribution."
+  },
+  {
+    "objectID": "lectures/10.html#normal-distribution-2",
+    "href": "lectures/10.html#normal-distribution-2",
+    "title": "Mathematical Models",
+    "section": "Normal Distribution",
+    "text": "Normal Distribution\n\n\nCode\nx &lt;- seq(-4, 4, length.out = 1000)\ndata.frame(x = x, y = dnorm(x)) |&gt; \n  ggplot(aes(x, y)) +\n  geom_line()"
+  },
+  {
+    "objectID": "lectures/10.html#properties-of-the-normal-distribution",
+    "href": "lectures/10.html#properties-of-the-normal-distribution",
+    "title": "Mathematical Models",
+    "section": "Properties of the Normal Distribution",
+    "text": "Properties of the Normal Distribution\n\n\nSymmetry: It is perfectly symmetric about the mean, meaning the left side is a mirror image of the right.\nUnimodal: There is a single peak at the mean.\nMean, Median, and Mode are Equal: In a normal distribution, these three measures of central tendency are located at the same point.\n68-95-99.7 Rule (Empirical Rule)"
+  },
+  {
+    "objectID": "lectures/10.html#standard-normal-distribution",
+    "href": "lectures/10.html#standard-normal-distribution",
+    "title": "Mathematical Models",
+    "section": "Standard Normal Distribution",
+    "text": "Standard Normal Distribution\nThe Standard Normal Distribution is a special type of normal distribution with a mean of 0 and a standard deviation of 1. It’s often used as a reference to convert any normal distribution to a standard form."
+  },
+  {
+    "objectID": "lectures/10.html#z-scores",
+    "href": "lectures/10.html#z-scores",
+    "title": "Mathematical Models",
+    "section": "Z-Scores",
+    "text": "Z-Scores\nA Z-score (or standard score) tells us how many standard deviations an individual data point is from the mean. It’s calculated as: \\(Z = \\frac{X - \\mu}{\\sigma}\\)\n\nIf \\(Z\\) is positive, the data point is above the mean.\nIf \\(Z\\) is negative, the data point is below the mean.\nUsing Z-scores, we can compare values across different normal distributions or find the probability associated with a particular score."
+  },
+  {
+    "objectID": "lectures/10.html#empirical-rule",
+    "href": "lectures/10.html#empirical-rule",
+    "title": "Mathematical Models",
+    "section": "Empirical Rule",
+    "text": "Empirical Rule\nThe Empirical Rule provides a way to understand the spread of data in a normal distribution by describing how data points cluster around the mean. According to this rule:\n\nApproximately 68% of data points fall within one standard deviation of the mean.\nApproximately 95% of data points fall within two standard deviations of the mean.\nApproximately 99.7% of data points fall within three standard deviations of the mean."
+  },
+  {
+    "objectID": "lectures/10.html#empirical-rule-and-normal-distribution",
+    "href": "lectures/10.html#empirical-rule-and-normal-distribution",
+    "title": "Mathematical Models",
+    "section": "Empirical Rule and Normal Distribution",
+    "text": "Empirical Rule and Normal Distribution\nIn a normal distribution:\n\n68% of data lies between \\((\\mu - \\sigma)\\) and \\((\\mu + \\sigma)\\).\n95% of data lies between \\((\\mu - 2\\sigma)\\) and \\((\\mu + 2\\sigma)\\).\n99.7% of data lies between \\((\\mu - 3\\sigma)\\) and \\((\\mu + 3\\sigma)\\).\n\nThese intervals allow us to estimate probabilities for data within each range without needing to calculate exact probabilities."
+  },
+  {
+    "objectID": "lectures/10.html#visualizing-the-empirical-rule",
+    "href": "lectures/10.html#visualizing-the-empirical-rule",
+    "title": "Mathematical Models",
+    "section": "Visualizing the Empirical Rule",
+    "text": "Visualizing the Empirical Rule\n\nThe 68% region represents the middle of the curve, starting one standard deviation left of the mean and ending one standard deviation right.\nThe 95% region stretches further out, covering almost the entire curve except for the outer tails.\nThe 99.7% region includes nearly all data points, covering the entire curve except for a tiny fraction at each extreme."
+  },
+  {
+    "objectID": "lectures/10.html#empirical-rule-1",
+    "href": "lectures/10.html#empirical-rule-1",
+    "title": "Mathematical Models",
+    "section": "Empirical Rule",
+    "text": "Empirical Rule"
+  },
+  {
+    "objectID": "lectures/10.html#central-limit-theorem-1",
+    "href": "lectures/10.html#central-limit-theorem-1",
+    "title": "Mathematical Models",
+    "section": "Central Limit Theorem",
+    "text": "Central Limit Theorem\nWhat does the Central Limit Theorem (CLT) actually tell us?\n\nThe CLT states that:\n\n\nIf you take a sufficiently large number of samples from any population, the distribution of the sample means will be approximately normal.\nThis approximation holds no matter the shape of the original population distribution (it could be normal, skewed, bimodal, etc.).\nThe mean of this sampling distribution will be equal to the population mean.\nThe standard deviation of this sampling distribution (often called the standard error) will be the population standard deviation divided by the square root of the sample size, ( _{} = )."
+  },
+  {
+    "objectID": "lectures/10.html#why-the-central-limit-theorem-is-important",
+    "href": "lectures/10.html#why-the-central-limit-theorem-is-important",
+    "title": "Mathematical Models",
+    "section": "Why the Central Limit Theorem is Important",
+    "text": "Why the Central Limit Theorem is Important\nThe CLT is powerful for several reasons:\n\n\nPredicting Sample Outcomes: Since we know the distribution of sample means will be approximately normal, we can make predictions about future samples.\nConfidence Intervals and Hypothesis Testing: The normal distribution of sample means allows us to estimate population parameters (like the mean) with confidence and test hypotheses even if the population itself isn’t normally distributed.\nPractical Applications in Various Fields: From quality control in manufacturing to political polling and medicine, the CLT lets us make inferences about population characteristics based on sample data."
+  },
+  {
+    "objectID": "lectures/10.html#using-mathematical-models",
+    "href": "lectures/10.html#using-mathematical-models",
+    "title": "Mathematical Models",
+    "section": "Using Mathematical Models",
+    "text": "Using Mathematical Models\nThe inferential procedures, such as computing the p-value or confidence interval, can be constructed with mathematical models."
+  },
+  {
+    "objectID": "lectures/10.html#advantages",
+    "href": "lectures/10.html#advantages",
+    "title": "Mathematical Models",
+    "section": "Advantages",
+    "text": "Advantages\n\n\nMathematical Models have been widely studied and implemented in several software packages.\nThese are not computationally intensive\nCan work with smaller data set and provide more reliable results"
+  },
+  {
+    "objectID": "lectures/10.html#disadvantages",
+    "href": "lectures/10.html#disadvantages",
+    "title": "Mathematical Models",
+    "section": "Disadvantages",
+    "text": "Disadvantages\n\n\nIf the mathematical model is wrong, results may be invalid.\nDifficult to know what are the true mathematical models."
+  },
+  {
+    "objectID": "lectures/10.html#inference-in-r-1",
+    "href": "lectures/10.html#inference-in-r-1",
+    "title": "Mathematical Models",
+    "section": "Inference in R",
+    "text": "Inference in R\n\\[\nH_0:\\ \\Delta =  p_1-p_2 = 0\n\\]\n\\[\nH_a:\\ \\Delta = p_1 - p_2 \\neq 0\n\\]"
+  },
+  {
+    "objectID": "lectures/10.html#proportions-test",
+    "href": "lectures/10.html#proportions-test",
+    "title": "Mathematical Models",
+    "section": "Proportions Test",
+    "text": "Proportions Test\n\n\nCode\nprop.test(x = c(CAT_1, CAT_2), n = c(N_1, N_2))"
+  },
+  {
+    "objectID": "lectures/10.html#descriptives",
+    "href": "lectures/10.html#descriptives",
+    "title": "Mathematical Models",
+    "section": "Descriptives",
+    "text": "Descriptives\n\n\nCode\ncat_stats(bacteria$ap, bacteria$y)\n\n\n#&gt; \n#&gt;    Cell Contents\n#&gt; |-------------------------|\n#&gt; |                   Count |\n#&gt; |             Row Percent |\n#&gt; |          Column Percent |\n#&gt; |           Total Percent |\n#&gt; |-------------------------|\n#&gt; \n#&gt; Total Observations in Table:  220 \n#&gt; \n#&gt;              | bacteria$y \n#&gt;  bacteria$ap |        n  |        y  | Row Total | \n#&gt; -------------|-----------|-----------|-----------|\n#&gt;            a |       31  |       93  |      124  | \n#&gt;              |     25.0% |     75.0% |     56.4% | \n#&gt;              |     72.1% |     52.5% |           | \n#&gt;              |     14.1% |     42.3% |           | \n#&gt; -------------|-----------|-----------|-----------|\n#&gt;            p |       12  |       84  |       96  | \n#&gt;              |     12.5% |     87.5% |     43.6% | \n#&gt;              |     27.9% |     47.5% |           | \n#&gt;              |      5.5% |     38.2% |           | \n#&gt; -------------|-----------|-----------|-----------|\n#&gt; Column Total |       43  |      177  |      220  | \n#&gt;              |     19.5% |     80.5% |           | \n#&gt; -------------|-----------|-----------|-----------|\n#&gt; \n#&gt; \n\n\n#&gt; NULL"
+  },
+  {
+    "objectID": "lectures/10.html#proportions-test-in-r",
+    "href": "lectures/10.html#proportions-test-in-r",
+    "title": "Mathematical Models",
+    "section": "Proportions Test in R",
+    "text": "Proportions Test in R\n\n\nCode\nprop.test(x = c(93, 84), n = c(124, 96))\n\n\n#&gt; \n#&gt;  2-sample test for equality of proportions with continuity correction\n#&gt; \n#&gt; data:  c(93, 84) out of c(124, 96)\n#&gt; X-squared = 4.6109, df = 1, p-value = 0.03177\n#&gt; alternative hypothesis: two.sided\n#&gt; 95 percent confidence interval:\n#&gt;  -0.23516294 -0.01483706\n#&gt; sample estimates:\n#&gt; prop 1 prop 2 \n#&gt;  0.750  0.875"
   },
   {
     "objectID": "lectures/3a.html#quiz",
@@ -5271,193 +5313,172 @@
     "text": "About Model Selection\nGenerally, it is not a good idea to conduct model selection. The predictor variables in your model should be guided by a literature review that illustrates important predictor variables in a model."
   },
   {
-    "objectID": "lectures/10.html#motivation-1",
-    "href": "lectures/10.html#motivation-1",
-    "title": "Mathematical Models",
-    "section": "Motivation",
-    "text": "Motivation\nThe bacteria data set contians information on whether bacteria (y: y or n) is present after utilizing treatments (ap: active or placebo).\n\nWe are interesting in determine the proportion of having bacteria present is different for those taking an “active” or “placebo”."
+    "objectID": "lectures/4b.html#histogram",
+    "href": "lectures/4b.html#histogram",
+    "title": "Data Visualization",
+    "section": "Histogram",
+    "text": "Histogram\nA histogram is a graphical representation of the distribution or frequency of data points in a dataset. It provides a visual way to understand the shape, central tendency, and spread of a dataset by dividing the data into intervals or bins and showing how many data points fall into each bin."
   },
   {
-    "objectID": "lectures/10.html#comparing-proportions",
-    "href": "lectures/10.html#comparing-proportions",
-    "title": "Mathematical Models",
-    "section": "Comparing Proportions",
-    "text": "Comparing Proportions\nWe are interesting in determining if different groups see different proportions of a binary outcome.\nWe compute the proportions of observing the binary outcome in Group 1 and Group 2 and see if they are fundamentally different from each other."
+    "objectID": "lectures/4b.html#histogram-r-code",
+    "href": "lectures/4b.html#histogram-r-code",
+    "title": "Data Visualization",
+    "section": "Histogram R Code",
+    "text": "Histogram R Code\n\ngf_histogram(~bill_length_mm, data = penguins)"
   },
   {
-    "objectID": "lectures/10.html#by-2-cross-tabulations",
-    "href": "lectures/10.html#by-2-cross-tabulations",
-    "title": "Mathematical Models",
-    "section": "2 by 2 Cross Tabulations",
-    "text": "2 by 2 Cross Tabulations\n\n\n\nGroups\nOutcome 1\nOutcome 2\n\n\nGroup 1\n\\(p_{11}\\)\n\\(p_{21}\\)\n\n\nGroup 2\n\\(p_{12}\\)\n\\(p_{22}\\)\n\n\n\n\nWe want to compare \\(p_{11}\\) and \\(p_{12}\\), to determine if the probability of outcome 1 are the same for both groups."
+    "objectID": "lectures/4b.html#histogram-1",
+    "href": "lectures/4b.html#histogram-1",
+    "title": "Data Visualization",
+    "section": "Histogram",
+    "text": "Histogram"
   },
   {
-    "objectID": "lectures/10.html#test-statistic",
-    "href": "lectures/10.html#test-statistic",
-    "title": "Mathematical Models",
-    "section": "Test Statistic",
-    "text": "Test Statistic\nWe can use both \\(p_{11}\\) and \\(p_{12}\\) to determine if there is a fundamental difference.\n\nHowever, it will be more beneficial to utilize one statistic to contruct the sampling distribution.\n\n\n\\[\nT =  \\hat p_{11} - \\hat p_{12}\n\\]"
+    "objectID": "lectures/4b.html#box-plot",
+    "href": "lectures/4b.html#box-plot",
+    "title": "Data Visualization",
+    "section": "Box Plot",
+    "text": "Box Plot\nA box plot, also known as a box-and-whisker plot, is a graphical representation of the distribution and key statistical characteristics of a dataset. It provides a visual summary of the data’s central tendency, spread, and potential outliers."
   },
   {
-    "objectID": "lectures/10.html#obtain-proportions-in-r",
-    "href": "lectures/10.html#obtain-proportions-in-r",
-    "title": "Mathematical Models",
-    "section": "Obtain Proportions in R",
-    "text": "Obtain Proportions in R\n\n\nCode\nprops_df(DATA, GROUP, OUTCOME, VAL)"
+    "objectID": "lectures/4b.html#box-plot-1",
+    "href": "lectures/4b.html#box-plot-1",
+    "title": "Data Visualization",
+    "section": "Box Plot",
+    "text": "Box Plot"
   },
   {
-    "objectID": "lectures/10.html#obtain-difference-in-r",
-    "href": "lectures/10.html#obtain-difference-in-r",
-    "title": "Mathematical Models",
-    "section": "Obtain Difference in R",
-    "text": "Obtain Difference in R\n\n\nCode\nprops_df(DATA, GROUP, OUTCOME, VAL, diff = TRUE)"
+    "objectID": "lectures/4b.html#box-plot-r-code",
+    "href": "lectures/4b.html#box-plot-r-code",
+    "title": "Data Visualization",
+    "section": "Box Plot R Code",
+    "text": "Box Plot R Code\n\ngf_boxplot(~bill_length_mm, data = penguins)"
   },
   {
-    "objectID": "lectures/10.html#bacteria-example",
-    "href": "lectures/10.html#bacteria-example",
-    "title": "Mathematical Models",
-    "section": "Bacteria Example",
-    "text": "Bacteria Example\n\n\nCode\nprops_df(bacteria, ap, y, \"y\")\n\n\n#&gt;    p1    p2 \n#&gt; 0.750 0.875"
+    "objectID": "lectures/4b.html#box-plot-2",
+    "href": "lectures/4b.html#box-plot-2",
+    "title": "Data Visualization",
+    "section": "Box Plot",
+    "text": "Box Plot"
   },
   {
-    "objectID": "lectures/10.html#bacteria-example-1",
-    "href": "lectures/10.html#bacteria-example-1",
-    "title": "Mathematical Models",
-    "section": "Bacteria Example",
-    "text": "Bacteria Example\n\n\nCode\nprops_df(bacteria, ap, y, \"y\", TRUE)\n\n\n#&gt; [1] 0.125"
+    "objectID": "lectures/4b.html#categorical-variables",
+    "href": "lectures/4b.html#categorical-variables",
+    "title": "Data Visualization",
+    "section": "Categorical Variables",
+    "text": "Categorical Variables\n\n\n#&gt; $species\n#&gt;  [1] Adelie    Gentoo    Chinstrap Chinstrap Gentoo    Gentoo    Gentoo   \n#&gt;  [8] Adelie    Adelie    Gentoo    Gentoo    Gentoo    Chinstrap Gentoo   \n#&gt; [15] Chinstrap Chinstrap Gentoo    Chinstrap Adelie    Adelie   \n#&gt; Levels: Adelie Chinstrap Gentoo"
   },
   {
-    "objectID": "lectures/10.html#hypotheis-test",
-    "href": "lectures/10.html#hypotheis-test",
-    "title": "Mathematical Models",
-    "section": "Hypotheis Test",
-    "text": "Hypotheis Test\nWe will test the following hypothesis:\n\\[\nH_0:\\ \\Delta =  p_1-p_2 = 0\n\\]\n\\[\nH_a:\\ \\Delta = p_1 - p_2 \\neq 0\n\\]"
+    "objectID": "lectures/4b.html#frequency-tables",
+    "href": "lectures/4b.html#frequency-tables",
+    "title": "Data Visualization",
+    "section": "Frequency Tables",
+    "text": "Frequency Tables\nA frequency table is a statistical tool used to organize and summarize a set of data by counting the number of times each unique value or category appears within the dataset. It provides a simple and clear way to represent the distribution of data, particularly for categorical or discrete variables."
   },
   {
-    "objectID": "lectures/10.html#normal-distribution-1",
-    "href": "lectures/10.html#normal-distribution-1",
-    "title": "Mathematical Models",
-    "section": "Normal Distribution",
-    "text": "Normal Distribution\nThe Normal Distribution is a probability distribution that is symmetric, with most of the data points clustering around the mean.\n\nIt’s bell-shaped and is defined mathematically by two parameters:\n\nMean (\\(\\mu\\)): The center or peak of the distribution.\nStandard Deviation (\\(\\sigma\\)): Controls the spread of the distribution."
+    "objectID": "lectures/4b.html#relative-frequency",
+    "href": "lectures/4b.html#relative-frequency",
+    "title": "Data Visualization",
+    "section": "Relative Frequency",
+    "text": "Relative Frequency\nRelative frequency is a statistical concept used to describe the proportion or percentage of times a particular event or outcome occurs relative to the total number of observations or occurrences in a dataset or sample."
   },
   {
-    "objectID": "lectures/10.html#normal-distribution-2",
-    "href": "lectures/10.html#normal-distribution-2",
-    "title": "Mathematical Models",
-    "section": "Normal Distribution",
-    "text": "Normal Distribution\n\n\nCode\nx &lt;- seq(-4, 4, length.out = 1000)\ndata.frame(x = x, y = dnorm(x)) |&gt; \n  ggplot(aes(x, y)) +\n  geom_line()"
+    "objectID": "lectures/4b.html#proportional-tables",
+    "href": "lectures/4b.html#proportional-tables",
+    "title": "Data Visualization",
+    "section": "Proportional Tables",
+    "text": "Proportional Tables\nA proportion table is a type of statistical table used to display the relative frequencies or proportions of different categories within a dataset. It provides a way to represent the distribution of data in terms of percentages or proportions, making it easier to compare and understand the relative sizes of different categories."
   },
   {
-    "objectID": "lectures/10.html#properties-of-the-normal-distribution",
-    "href": "lectures/10.html#properties-of-the-normal-distribution",
-    "title": "Mathematical Models",
-    "section": "Properties of the Normal Distribution",
-    "text": "Properties of the Normal Distribution\n\n\nSymmetry: It is perfectly symmetric about the mean, meaning the left side is a mirror image of the right.\nUnimodal: There is a single peak at the mean.\nMean, Median, and Mode are Equal: In a normal distribution, these three measures of central tendency are located at the same point.\n68-95-99.7 Rule (Empirical Rule)"
+    "objectID": "lectures/4b.html#pie-charts",
+    "href": "lectures/4b.html#pie-charts",
+    "title": "Data Visualization",
+    "section": "Pie Charts",
+    "text": "Pie Charts\nA pie chart is a circular graphical representation used to display data in a way that illustrates the relative proportions or percentages of different categories or components within a whole. Pie charts are particularly useful for showing the composition of a dataset when you want to emphasize the parts of a whole and how they relate to each other."
   },
   {
-    "objectID": "lectures/10.html#standard-normal-distribution",
-    "href": "lectures/10.html#standard-normal-distribution",
-    "title": "Mathematical Models",
-    "section": "Standard Normal Distribution",
-    "text": "Standard Normal Distribution\nThe Standard Normal Distribution is a special type of normal distribution with a mean of 0 and a standard deviation of 1. It’s often used as a reference to convert any normal distribution to a standard form."
+    "objectID": "lectures/4b.html#pie-charts-r-code",
+    "href": "lectures/4b.html#pie-charts-r-code",
+    "title": "Data Visualization",
+    "section": "Pie Charts R Code",
+    "text": "Pie Charts R Code\n\npenguins |&gt; ggplot(aes(x=\"\", fill = species)) + \n  geom_bar() + \n  coord_polar(\"y\")"
   },
   {
-    "objectID": "lectures/10.html#z-scores",
-    "href": "lectures/10.html#z-scores",
-    "title": "Mathematical Models",
-    "section": "Z-Scores",
-    "text": "Z-Scores\nA Z-score (or standard score) tells us how many standard deviations an individual data point is from the mean. It’s calculated as: \\(Z = \\frac{X - \\mu}{\\sigma}\\)\n\nIf \\(Z\\) is positive, the data point is above the mean.\nIf \\(Z\\) is negative, the data point is below the mean.\nUsing Z-scores, we can compare values across different normal distributions or find the probability associated with a particular score."
+    "objectID": "lectures/4b.html#pie-charts-in-r",
+    "href": "lectures/4b.html#pie-charts-in-r",
+    "title": "Data Visualization",
+    "section": "Pie Charts in R",
+    "text": "Pie Charts in R"
   },
   {
-    "objectID": "lectures/10.html#empirical-rule",
-    "href": "lectures/10.html#empirical-rule",
-    "title": "Mathematical Models",
-    "section": "Empirical Rule",
-    "text": "Empirical Rule\nThe Empirical Rule provides a way to understand the spread of data in a normal distribution by describing how data points cluster around the mean. According to this rule:\n\nApproximately 68% of data points fall within one standard deviation of the mean.\nApproximately 95% of data points fall within two standard deviations of the mean.\nApproximately 99.7% of data points fall within three standard deviations of the mean."
+    "objectID": "lectures/4b.html#bar-charts",
+    "href": "lectures/4b.html#bar-charts",
+    "title": "Data Visualization",
+    "section": "Bar Charts",
+    "text": "Bar Charts\nA bar chart, also known as a bar graph, is a graphical representation used to display categorical data in a way that visually represents the values or frequencies of different categories by using rectangular bars. Bar charts are particularly effective for comparing and showing the relationships between distinct categories or groups."
   },
   {
-    "objectID": "lectures/10.html#empirical-rule-and-normal-distribution",
-    "href": "lectures/10.html#empirical-rule-and-normal-distribution",
-    "title": "Mathematical Models",
-    "section": "Empirical Rule and Normal Distribution",
-    "text": "Empirical Rule and Normal Distribution\nIn a normal distribution:\n\n68% of data lies between \\((\\mu - \\sigma)\\) and \\((\\mu + \\sigma)\\).\n95% of data lies between \\((\\mu - 2\\sigma)\\) and \\((\\mu + 2\\sigma)\\).\n99.7% of data lies between \\((\\mu - 3\\sigma)\\) and \\((\\mu + 3\\sigma)\\).\n\nThese intervals allow us to estimate probabilities for data within each range without needing to calculate exact probabilities."
+    "objectID": "lectures/4b.html#bar-charts-r-code",
+    "href": "lectures/4b.html#bar-charts-r-code",
+    "title": "Data Visualization",
+    "section": "Bar Charts R Code",
+    "text": "Bar Charts R Code\n\ngf_bar(~species, data = penguins)"
   },
   {
-    "objectID": "lectures/10.html#visualizing-the-empirical-rule",
-    "href": "lectures/10.html#visualizing-the-empirical-rule",
-    "title": "Mathematical Models",
-    "section": "Visualizing the Empirical Rule",
-    "text": "Visualizing the Empirical Rule\n\nThe 68% region represents the middle of the curve, starting one standard deviation left of the mean and ending one standard deviation right.\nThe 95% region stretches further out, covering almost the entire curve except for the outer tails.\nThe 99.7% region includes nearly all data points, covering the entire curve except for a tiny fraction at each extreme."
+    "objectID": "lectures/4b.html#bar-charts-r-code-1",
+    "href": "lectures/4b.html#bar-charts-r-code-1",
+    "title": "Data Visualization",
+    "section": "Bar Charts R Code",
+    "text": "Bar Charts R Code"
   },
   {
-    "objectID": "lectures/10.html#empirical-rule-1",
-    "href": "lectures/10.html#empirical-rule-1",
-    "title": "Mathematical Models",
-    "section": "Empirical Rule",
-    "text": "Empirical Rule"
+    "objectID": "lectures/4b.html#explaining-variation-1",
+    "href": "lectures/4b.html#explaining-variation-1",
+    "title": "Data Visualization",
+    "section": "Explaining Variation",
+    "text": "Explaining Variation\n\nThis is the process where we try to reduce the variation with the use of other variables.\n\n\nCan be thought of as getting it less wrong when taking an educated guess."
   },
   {
-    "objectID": "lectures/10.html#central-limit-theorem-1",
-    "href": "lectures/10.html#central-limit-theorem-1",
-    "title": "Mathematical Models",
-    "section": "Central Limit Theorem",
-    "text": "Central Limit Theorem\nWhat does the Central Limit Theorem (CLT) actually tell us?\n\nThe CLT states that:\n\n\nIf you take a sufficiently large number of samples from any population, the distribution of the sample means will be approximately normal.\nThis approximation holds no matter the shape of the original population distribution (it could be normal, skewed, bimodal, etc.).\nThe mean of this sampling distribution will be equal to the population mean.\nThe standard deviation of this sampling distribution (often called the standard error) will be the population standard deviation divided by the square root of the sample size, ( _{} = )."
+    "objectID": "lectures/4b.html#explaining-variation-2",
+    "href": "lectures/4b.html#explaining-variation-2",
+    "title": "Data Visualization",
+    "section": "Explaining Variation",
+    "text": "Explaining Variation"
   },
   {
-    "objectID": "lectures/10.html#why-the-central-limit-theorem-is-important",
-    "href": "lectures/10.html#why-the-central-limit-theorem-is-important",
-    "title": "Mathematical Models",
-    "section": "Why the Central Limit Theorem is Important",
-    "text": "Why the Central Limit Theorem is Important\nThe CLT is powerful for several reasons:\n\n\nPredicting Sample Outcomes: Since we know the distribution of sample means will be approximately normal, we can make predictions about future samples.\nConfidence Intervals and Hypothesis Testing: The normal distribution of sample means allows us to estimate population parameters (like the mean) with confidence and test hypotheses even if the population itself isn’t normally distributed.\nPractical Applications in Various Fields: From quality control in manufacturing to political polling and medicine, the CLT lets us make inferences about population characteristics based on sample data."
+    "objectID": "lectures/4b.html#explaining-variation-with-one-variable",
+    "href": "lectures/4b.html#explaining-variation-with-one-variable",
+    "title": "Data Visualization",
+    "section": "Explaining Variation with One Variable",
+    "text": "Explaining Variation with One Variable"
   },
   {
-    "objectID": "lectures/10.html#using-mathematical-models",
-    "href": "lectures/10.html#using-mathematical-models",
-    "title": "Mathematical Models",
-    "section": "Using Mathematical Models",
-    "text": "Using Mathematical Models\nThe inferential procedures, such as computing the p-value or confidence interval, can be constructed with mathematical models."
+    "objectID": "lectures/4b.html#explaining-variation-with-one-variable-1",
+    "href": "lectures/4b.html#explaining-variation-with-one-variable-1",
+    "title": "Data Visualization",
+    "section": "Explaining Variation with One Variable",
+    "text": "Explaining Variation with One Variable"
   },
   {
-    "objectID": "lectures/10.html#advantages",
-    "href": "lectures/10.html#advantages",
-    "title": "Mathematical Models",
-    "section": "Advantages",
-    "text": "Advantages\n\n\nMathematical Models have been widely studied and implemented in several software packages.\nThese are not computationally intensive\nCan work with smaller data set and provide more reliable results"
+    "objectID": "lectures/4b.html#outcome-variables",
+    "href": "lectures/4b.html#outcome-variables",
+    "title": "Data Visualization",
+    "section": "Outcome Variables",
+    "text": "Outcome Variables\nThese are variables we want to study.\n\nAlso known as outcome of interest.\n\n\nAlso known as dependent variable."
   },
   {
-    "objectID": "lectures/10.html#disadvantages",
-    "href": "lectures/10.html#disadvantages",
-    "title": "Mathematical Models",
-    "section": "Disadvantages",
-    "text": "Disadvantages\n\n\nIf the mathematical model is wrong, results may be invalid.\nDifficult to know what are the true mathematical models."
+    "objectID": "lectures/4b.html#explanatory-variables",
+    "href": "lectures/4b.html#explanatory-variables",
+    "title": "Data Visualization",
+    "section": "Explanatory Variables",
+    "text": "Explanatory Variables\nThese are variable that explain the outcome of interest.\n\nAlso known as predictor variable.\n\n\nAlso known as independent variable."
   },
   {
-    "objectID": "lectures/10.html#inference-in-r-1",
-    "href": "lectures/10.html#inference-in-r-1",
-    "title": "Mathematical Models",
-    "section": "Inference in R",
-    "text": "Inference in R\n\\[\nH_0:\\ \\Delta =  p_1-p_2 = 0\n\\]\n\\[\nH_a:\\ \\Delta = p_1 - p_2 \\neq 0\n\\]"
-  },
-  {
-    "objectID": "lectures/10.html#proportions-test",
-    "href": "lectures/10.html#proportions-test",
-    "title": "Mathematical Models",
-    "section": "Proportions Test",
-    "text": "Proportions Test\n\n\nCode\nprop.test(x = c(CAT_1, CAT_2), n = c(N_1, N_2))"
-  },
-  {
-    "objectID": "lectures/10.html#descriptives",
-    "href": "lectures/10.html#descriptives",
-    "title": "Mathematical Models",
-    "section": "Descriptives",
-    "text": "Descriptives\n\n\nCode\ncat_stats(bacteria$ap, bacteria$y)\n\n\n#&gt; \n#&gt;    Cell Contents\n#&gt; |-------------------------|\n#&gt; |                   Count |\n#&gt; |             Row Percent |\n#&gt; |          Column Percent |\n#&gt; |           Total Percent |\n#&gt; |-------------------------|\n#&gt; \n#&gt; Total Observations in Table:  220 \n#&gt; \n#&gt;              | bacteria$y \n#&gt;  bacteria$ap |        n  |        y  | Row Total | \n#&gt; -------------|-----------|-----------|-----------|\n#&gt;            a |       31  |       93  |      124  | \n#&gt;              |     25.0% |     75.0% |     56.4% | \n#&gt;              |     72.1% |     52.5% |           | \n#&gt;              |     14.1% |     42.3% |           | \n#&gt; -------------|-----------|-----------|-----------|\n#&gt;            p |       12  |       84  |       96  | \n#&gt;              |     12.5% |     87.5% |     43.6% | \n#&gt;              |     27.9% |     47.5% |           | \n#&gt;              |      5.5% |     38.2% |           | \n#&gt; -------------|-----------|-----------|-----------|\n#&gt; Column Total |       43  |      177  |      220  | \n#&gt;              |     19.5% |     80.5% |           | \n#&gt; -------------|-----------|-----------|-----------|\n#&gt; \n#&gt; \n\n\n#&gt; NULL"
-  },
-  {
-    "objectID": "lectures/10.html#proportions-test-in-r",
-    "href": "lectures/10.html#proportions-test-in-r",
-    "title": "Mathematical Models",
-    "section": "Proportions Test in R",
-    "text": "Proportions Test in R\n\n\nCode\nprop.test(x = c(93, 84), n = c(124, 96))\n\n\n#&gt; \n#&gt;  2-sample test for equality of proportions with continuity correction\n#&gt; \n#&gt; data:  c(93, 84) out of c(124, 96)\n#&gt; X-squared = 4.6109, df = 1, p-value = 0.03177\n#&gt; alternative hypothesis: two.sided\n#&gt; 95 percent confidence interval:\n#&gt;  -0.23516294 -0.01483706\n#&gt; sample estimates:\n#&gt; prop 1 prop 2 \n#&gt;  0.750  0.875"
+    "objectID": "lectures/4b.html#study-habits",
+    "href": "lectures/4b.html#study-habits",
+    "title": "Data Visualization",
+    "section": "Study Habits",
+    "text": "Study Habits\n\nThe first exam will be on September 25.\n\n\nWhat are some study strategies that you can implement in this course?"
   },
   {
     "objectID": "lectures/9.html#motivation-1",

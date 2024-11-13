@@ -58,7 +58,7 @@ theme_set(theme_bw() +
 
 The `ncbirths` data set provides information on whether different predictors. The outcome of interest will be `premie` ("full term" or "premie"). 
 
-## Model 1
+## Motivation 1
 
 Model the relationship between the outcome `premie` and `habit` ("smoker" and  "nonsmoker").
 
@@ -240,4 +240,32 @@ Typically, we want this error rate to be small ($\alpha = 0.05$).
 
 # Example 1
 
+## Example
+
+Use a logistic regression to model the outcome `premie` and `habit`.
+
+```{r}
+#| code-fold: true
+#| eval: false
+
+glm(premie ~ habit, data = ncbirths, family = binomial())
+b(glm(premie ~ habit, data = ncbirths, family = binomial()), 1)
+exp(b(glm(premie ~ habit, data = ncbirths, family = binomial()), 1))
+
+```
+
 # Example 2
+
+## Example
+
+## Logistic Model 2
+
+```{r}
+#| code-fold: true
+#| eval: false
+
+glm(premie ~ visits, data = ncbirths, family = binomial())
+
+b(glm(premie ~ visits, data = ncbirths, family = binomial()), 1)
+exp(b(glm(premie ~ visits, data = ncbirths, family = binomial()), 1))
+```

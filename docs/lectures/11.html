@@ -432,8 +432,8 @@
 <h2>Motivation</h2>
 <p>The <code>ncbirths</code> data set provides information on whether different predictors. The outcome of interest will be <code>premie</code> (“full term” or “premie”).</p>
 </section>
-<section id="model-1" class="slide level2">
-<h2>Model 1</h2>
+<section id="motivation-1-1" class="slide level2">
+<h2>Motivation 1</h2>
 <p>Model the relationship between the outcome <code>premie</code> and <code>habit</code> (“smoker” and “nonsmoker”).</p>
 </section>
 <section id="motivation-2" class="slide level2">
@@ -667,6 +667,7 @@
 </ol>
 </div>
 </section></section>
+<section>
 <section id="example-1" class="title-slide slide level1 agenda-slide center">
 <h1>Example 1</h1>
 <div class="agenda">
@@ -686,7 +687,19 @@
 </ul>
 </div>
 </section>
-
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>Use a logistic regression to model the outcome <code>premie</code> and <code>habit</code>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">glm</span>(premie <span class="sc">~</span> habit, <span class="at">data =</span> ncbirths, <span class="at">family =</span> <span class="fu">binomial</span>())</span>
+<span id="cb13-2"><a></a><span class="fu">b</span>(<span class="fu">glm</span>(premie <span class="sc">~</span> habit, <span class="at">data =</span> ncbirths, <span class="at">family =</span> <span class="fu">binomial</span>()), <span class="dv">1</span>)</span>
+<span id="cb13-3"><a></a><span class="fu">exp</span>(<span class="fu">b</span>(<span class="fu">glm</span>(premie <span class="sc">~</span> habit, <span class="at">data =</span> ncbirths, <span class="at">family =</span> <span class="fu">binomial</span>()), <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section></section>
+<section>
 <section id="example-2" class="title-slide slide level1 agenda-slide center">
 <h1>Example 2</h1>
 <div class="agenda">
@@ -704,6 +717,21 @@
 <p>Example 2</p>
 </div></li>
 </ul>
+</div>
+</section>
+<section id="example-3" class="slide level2">
+<h2>Example</h2>
+</section>
+<section id="logistic-model-2-1" class="slide level2">
+<h2>Logistic Model 2</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">glm</span>(premie <span class="sc">~</span> visits, <span class="at">data =</span> ncbirths, <span class="at">family =</span> <span class="fu">binomial</span>())</span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a><span class="fu">b</span>(<span class="fu">glm</span>(premie <span class="sc">~</span> visits, <span class="at">data =</span> ncbirths, <span class="at">family =</span> <span class="fu">binomial</span>()), <span class="dv">1</span>)</span>
+<span id="cb14-4"><a></a><span class="fu">exp</span>(<span class="fu">b</span>(<span class="fu">glm</span>(premie <span class="sc">~</span> visits, <span class="at">data =</span> ncbirths, <span class="at">family =</span> <span class="fu">binomial</span>()), <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 
 <div class="quarto-auto-generated-content">
@@ -725,7 +753,7 @@
 <p> </p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
