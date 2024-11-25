@@ -410,7 +410,7 @@ rdf <- resid_df(LM_OBJECT)
 
 ggplot(RDF, aes(fitted, resid)) +
   geom_point() +
-  geom_hline(xintercept = 0, col = "red")
+  geom_hline(yintercept = 0, col = "red")
 
 ```
 

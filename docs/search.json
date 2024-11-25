@@ -6073,7 +6073,7 @@
     "href": "lectures/12.html#residual-vs-fitted-plot-1",
     "title": "Inference with Linear Regression",
     "section": "Residual vs Fitted Plot",
-    "text": "Residual vs Fitted Plot\n\n\nCode\nggplot(RDF, aes(fitted, resid)) +\n  geom_point() +\n  geom_hline(xintercept = 0, col = \"red\")"
+    "text": "Residual vs Fitted Plot\n\n\nCode\nggplot(RDF, aes(fitted, resid)) +\n  geom_point() +\n  geom_hline(yintercept = 0, col = \"red\")"
   },
   {
     "objectID": "lectures/12.html#qq-plot-1",
