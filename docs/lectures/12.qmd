@@ -447,4 +447,3 @@ ggplot(dfxlm, aes(sample = resid)) +
 
 
 ```
-
