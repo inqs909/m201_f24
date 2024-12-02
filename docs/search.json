@@ -5723,7 +5723,7 @@
     "href": "lectures/13.html#likelihood-ratio-test",
     "title": "Inference with Logistic Regression",
     "section": "Likelihood Ratio Test",
-    "text": "Likelihood Ratio Test"
+    "text": "Likelihood Ratio Test\nThe Likelihood Ratio Test is a test to determine whether the likelihood of observing the outcome is significantly bigger in a larger, more complicated model, than a simpler model.\nIt conducts a hypothesis tests to see if models are significantly different from each other."
   },
   {
     "objectID": "lectures/13.html#conducting-an-lrt-in-r",

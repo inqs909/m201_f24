@@ -173,6 +173,10 @@ Is the model with predictors do a better job than using the average?
 
 ## Likelihood Ratio Test
 
+The Likelihood Ratio Test is a test to determine whether the likelihood of observing the outcome is significantly bigger in a larger, more complicated model, than a simpler model. 
+
+
+It conducts a hypothesis tests to see if models are significantly different from each other.
 
 ## Conducting an LRT in R
 
