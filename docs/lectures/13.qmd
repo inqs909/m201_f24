@@ -49,7 +49,8 @@ theme_set(theme_bw() +
               legend.title = element_blank(),
               legend.text = element_text(size = 24)))
 
-bladder1$death <- ifelse(bladder1$status %in% c(0, 1), 0, 1) 
+bladder1$death <- ifelse(bladder1$status %in% c(0, 1), 0, 1)
+bladder1$death2 <- ifelse(bladder1$death == 0, "Alive", "Dead")
 
 ```
 
@@ -58,6 +59,10 @@ bladder1$death <- ifelse(bladder1$status %in% c(0, 1), 0, 1)
 ## Motivating Example
 
 
+```{r}
+bladder1 |> ggplot(aes(number, color = death2)) +
+  geom_boxplot()
+```
 
 
 # $\beta$ Hypothesis Testing
@@ -241,3 +246,8 @@ m1 <- glm(death ~ number + size + recur, bladder1, family = binomial())
 m2 <- glm(death ~ recur, bladder1, family = binomial())
 anova(m2, m1, test = "LRT")
 ```
+
+
+# Practice
+
+## 
