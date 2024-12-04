@@ -32,6 +32,88 @@ filters:
 editor: source
 ---
 
+# Statistics
+
+## Traditional Statistics
+
+Traditional Statistics methods can conducted using either linear or logistic regression.
+
+Visit [Here](https://lindeloev.github.io/tests-as-linear/) for more information.
+
+## What is Statistics? 
+
+It is the study of variation and randomness!
+
+
+## What's the goal of Statistics?
+
+::: {.fragment style="font-size: 2em; color: red;"}
+**INFERENCE**
+:::
+
+::: fragment
+Use our sample data to understand the larger population.
+:::
+
+::: fragment
+The data will tell us how the population generally behaves.
+:::
+
+::: fragment
+The data will guide us in the differences in units.
+:::
+
+::: fragment
+Data will tell us if there is a signal or just noise.
+:::
+
+## Final Thoughts
+
+::: fragment
+When conducting a study, literature review and study design are as equally important as statistics.
+:::
+
+::: fragment
+If you don't see variability in the data, something is wrong.
+:::
+
+::: fragment
+Focus on consistency in the methodology, not consistency in data.
+:::
+
+::: fragment
+Understand that you can be wrong, and that is okay.
+:::
+
+::: fragment
+Don't let data influence the methodology during a study/experiment.
+:::
+
+
+
+## Statistics Mantra
+
+::: columns
+::: {.column width="50%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/GeorgeEPBox.jpg/400px-GeorgeEPBox.jpg){fig-alt="An image of George Box" fig-align="center" width="333"}
+:::
+
+::: {.column width="50%"}
+**All models are wrong,**
+
+**some are useful!**
+:::
+:::
+
+
+# Final Survey
+
+## Final Survey
+
+[Survery](https://forms.gle/iTJsCfXPjBKpmfdR9)
+
+![](img/frame (1).png)
+
 # Installation
 
 ## Installing R
@@ -130,84 +212,3 @@ download.file(u2,
 
 ## Loading Data
 
-# Statistics
-
-## Traditional Statistics
-
-Traditional Statistics methods can conducted using either linear or logistic regression.
-
-Visit [Here](https://lindeloev.github.io/tests-as-linear/) for more information.
-
-## What is Statistics? 
-
-It is the study of variation and randomness!
-
-
-## What's the goal of Statistics?
-
-::: {.fragment style="font-size: 2em; color: red;"}
-**INFERENCE**
-:::
-
-::: fragment
-Use our sample data to understand the larger population.
-:::
-
-::: fragment
-The data will tell us how the population generally behaves.
-:::
-
-::: fragment
-The data will guide us in the differences in units.
-:::
-
-::: fragment
-Data will tell us if there is a signal or just noise.
-:::
-
-## Final Thoughts
-
-::: fragment
-When conducting a study, literature review and study design are as equally important as statistics.
-:::
-
-::: fragment
-If you don't see variability in the data, something is wrong.
-:::
-
-::: fragment
-Focus on consistency in the methodology, not consistency in data.
-:::
-
-::: fragment
-Understand that you can be wrong, and that is okay.
-:::
-
-::: fragment
-Don't let data influence the methodology during a study/experiment.
-:::
-
-
-
-## Statistics Mantra
-
-::: columns
-::: {.column width="50%"}
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/GeorgeEPBox.jpg/400px-GeorgeEPBox.jpg){fig-alt="An image of George Box" fig-align="center" width="333"}
-:::
-
-::: {.column width="50%"}
-**All models are wrong,**
-
-**some are useful!**
-:::
-:::
-
-
-# Final Survey
-
-## Final Survey
-
-[Survery](https://forms.gle/iTJsCfXPjBKpmfdR9)
-
-![](img/frame (1).png)

@@ -4592,6 +4592,48 @@
     "text": "Why Not Others?"
   },
   {
+    "objectID": "c/15b.html#traditional-statistics",
+    "href": "c/15b.html#traditional-statistics",
+    "title": "Installing R and Rstudio",
+    "section": "Traditional Statistics",
+    "text": "Traditional Statistics\nTraditional Statistics methods can conducted using either linear or logistic regression.\nVisit Here for more information."
+  },
+  {
+    "objectID": "c/15b.html#what-is-statistics",
+    "href": "c/15b.html#what-is-statistics",
+    "title": "Installing R and Rstudio",
+    "section": "What is Statistics?",
+    "text": "What is Statistics?\nIt is the study of variation and randomness!"
+  },
+  {
+    "objectID": "c/15b.html#whats-the-goal-of-statistics",
+    "href": "c/15b.html#whats-the-goal-of-statistics",
+    "title": "Installing R and Rstudio",
+    "section": "What’s the goal of Statistics?",
+    "text": "What’s the goal of Statistics?\n\nINFERENCE\n\n\nUse our sample data to understand the larger population.\n\n\nThe data will tell us how the population generally behaves.\n\n\nThe data will guide us in the differences in units.\n\n\nData will tell us if there is a signal or just noise."
+  },
+  {
+    "objectID": "c/15b.html#final-thoughts",
+    "href": "c/15b.html#final-thoughts",
+    "title": "Installing R and Rstudio",
+    "section": "Final Thoughts",
+    "text": "Final Thoughts\n\nWhen conducting a study, literature review and study design are as equally important as statistics.\n\n\nIf you don’t see variability in the data, something is wrong.\n\n\nFocus on consistency in the methodology, not consistency in data.\n\n\nUnderstand that you can be wrong, and that is okay.\n\n\nDon’t let data influence the methodology during a study/experiment."
+  },
+  {
+    "objectID": "c/15b.html#statistics-mantra",
+    "href": "c/15b.html#statistics-mantra",
+    "title": "Installing R and Rstudio",
+    "section": "Statistics Mantra",
+    "text": "Statistics Mantra\n\n\n\n\n\n\n\n\nAll models are wrong,\nsome are useful!"
+  },
+  {
+    "objectID": "c/15b.html#final-survey-1",
+    "href": "c/15b.html#final-survey-1",
+    "title": "Installing R and Rstudio",
+    "section": "Final Survey",
+    "text": "Final Survey\nSurvery"
+  },
+  {
     "objectID": "c/15b.html#installing-r",
     "href": "c/15b.html#installing-r",
     "title": "Installing R and Rstudio",
@@ -4660,48 +4702,6 @@
     "title": "Installing R and Rstudio",
     "section": "Loading Data",
     "text": "Loading Data"
-  },
-  {
-    "objectID": "c/15b.html#traditional-statistics",
-    "href": "c/15b.html#traditional-statistics",
-    "title": "Installing R and Rstudio",
-    "section": "Traditional Statistics",
-    "text": "Traditional Statistics\nTraditional Statistics methods can conducted using either linear or logistic regression.\nVisit Here for more information."
-  },
-  {
-    "objectID": "c/15b.html#what-is-statistics",
-    "href": "c/15b.html#what-is-statistics",
-    "title": "Installing R and Rstudio",
-    "section": "What is Statistics?",
-    "text": "What is Statistics?\nIt is the study of variation and randomness!"
-  },
-  {
-    "objectID": "c/15b.html#whats-the-goal-of-statistics",
-    "href": "c/15b.html#whats-the-goal-of-statistics",
-    "title": "Installing R and Rstudio",
-    "section": "What’s the goal of Statistics?",
-    "text": "What’s the goal of Statistics?\n\nINFERENCE\n\n\nUse our sample data to understand the larger population.\n\n\nThe data will tell us how the population generally behaves.\n\n\nThe data will guide us in the differences in units.\n\n\nData will tell us if there is a signal or just noise."
-  },
-  {
-    "objectID": "c/15b.html#final-thoughts",
-    "href": "c/15b.html#final-thoughts",
-    "title": "Installing R and Rstudio",
-    "section": "Final Thoughts",
-    "text": "Final Thoughts\n\nWhen conducting a study, literature review and study design are as equally important as statistics.\n\n\nIf you don’t see variability in the data, something is wrong.\n\n\nFocus on consistency in the methodology, not consistency in data.\n\n\nUnderstand that you can be wrong, and that is okay.\n\n\nDon’t let data influence the methodology during a study/experiment."
-  },
-  {
-    "objectID": "c/15b.html#statistics-mantra",
-    "href": "c/15b.html#statistics-mantra",
-    "title": "Installing R and Rstudio",
-    "section": "Statistics Mantra",
-    "text": "Statistics Mantra\n\n\n\n\n\n\n\n\nAll models are wrong,\nsome are useful!"
-  },
-  {
-    "objectID": "c/15b.html#final-survey-1",
-    "href": "c/15b.html#final-survey-1",
-    "title": "Installing R and Rstudio",
-    "section": "Final Survey",
-    "text": "Final Survey\nSurvery"
   },
   {
     "objectID": "lectures/4a.html#dominos-with-dean-kholi",
